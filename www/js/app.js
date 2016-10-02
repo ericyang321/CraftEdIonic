@@ -35,12 +35,14 @@ var craftEd = angular.module('craftEd', ['ionic'])
 
   .state('register', {
     url: '/register',
-    templateUrl: 'templates/register.html'
+    templateUrl: 'templates/register.html',
+    controller: 'UserController'
   })
 
   .state('login', {
     url: '/login',
-    templateUrl: 'templates/login.html'
+    templateUrl: 'templates/login.html',
+    controller: 'UserController'
   })
 
   .state('flavors', {
@@ -62,7 +64,8 @@ var craftEd = angular.module('craftEd', ['ionic'])
 
   .state('rating', {
     url: '/rating',
-    templateUrl: 'templates/rating.html'
+    templateUrl: 'templates/rating.html',
+    controller: 'RatingController'
   })
 
   .state('rating_confirm', {
