@@ -3,7 +3,7 @@
     <h1 class="title">Register</h1>
   </ion-header-bar>
   <ion-content>
-    <form name="registerForm">
+    <form name="registerForm" ng-controller="UserController">
       <div class="list">
         <label class="item item-input">
           <span class="input-label">Email</span>
@@ -18,7 +18,7 @@
           <input type="password" ng-model="passwordConfirm">
         </label>
         <label class="item">
-          <button class="button button-block button-positive" type="submit">Register</button>
+          <button ng-click="register()" class="button button-block button-positive" type="submit">Register</button>
         </label>
       </div>
     </form>

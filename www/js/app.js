@@ -46,7 +46,7 @@ var craftEd = angular.module('craftEd', ['ionic'])
   .state('flavors', {
     url: '/flavors',
     templateUrl: 'templates/flavors.html',
-    // controller: 'FlavorController'
+    controller: 'FlavorController'
   })
 
   .state('profile', {

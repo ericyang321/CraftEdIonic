@@ -1,4 +1,4 @@
-  craftEd.controller('LoginController', function($scope, $ionicModal, $timeout) {
+  craftEd.controller('LoginController', ['$http', '$scope', function($scope, $ionicModal, $timeout) {
 
   // Form data for the login modal
   $scope.loginData = {};
