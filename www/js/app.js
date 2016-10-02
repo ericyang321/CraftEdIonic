@@ -49,10 +49,30 @@ var craftEd = angular.module('craftEd', ['ionic'])
     controller: 'FlavorController'
   })
 
+  .state('new_recs', {
+    url: '/new_recs',
+    templateUrl: 'templates/new_recs.html',
+    controller: 'RecsController'
+  })
+
+  .state('old_likes', {
+    url: '/old_likes',
+    templateUrl: 'templates/old_likes.html'
+  })
+
+  .state('rating', {
+    url: '/rating',
+    templateUrl: 'templates/rating.html'
+  })
+
+  .state('rating_confirm', {
+    url: '/rating_confirm',
+    templateUrl: 'templates/rating_confirm.html'
+  })
+
   .state('profile', {
     url: '/profile',
-    templateUrl: 'templates/profile.html',
-    // controller: 'UserController'
+    templateUrl: 'templates/profile.html'
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/home');
