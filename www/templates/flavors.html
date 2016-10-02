@@ -1,0 +1,12 @@
+<ion-view view-title="Flavors">
+  <ion-content>
+    <h1 class="title">Flavors</h1>
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  <div ng-controller="FlavorController">
+    <div ng-repeat="flavor in allFlavors">
+      <p>{{flavor.flavor}}</p>
+    </div>
+  <a href="#/new_recs" class="button button-positive">Next</a>
+  </div>
+  </ion-content>
+</ion-view>

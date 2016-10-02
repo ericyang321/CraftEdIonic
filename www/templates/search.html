@@ -1,5 +1,10 @@
 <ion-view view-title="Search">
   <ion-content>
     <h1>Search</h1>
+      <ion-list>
+        <ion-item ng-repeat="flavor in flavors" href="#/flavors{{flavor.id}}">
+      </ion-item>
+        {{flavor.name}}
+      </ion-list>
   </ion-content>
 </ion-view>
