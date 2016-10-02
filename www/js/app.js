@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 
-// var rootUrl = 'http://how-to-train-your-palate-api.herokuapp.com'
+var rootUrl = 'http://how-to-train-your-palate-api.herokuapp.com'
 
 var craftEd = angular.module('craftEd', ['ionic'])
 
@@ -35,14 +35,12 @@ var craftEd = angular.module('craftEd', ['ionic'])
 
   .state('register', {
     url: '/register',
-    templateUrl: 'templates/register.html',
-    controller: 'UserController'
+    templateUrl: 'templates/register.html'
   })
 
   .state('login', {
     url: '/login',
-    templateUrl: 'templates/login.html',
-    controller: 'LoginController'
+    templateUrl: 'templates/login.html'
   })
 
   .state('flavors', {
