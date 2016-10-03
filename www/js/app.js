@@ -79,4 +79,12 @@ var craftEd = angular.module('craftEd', ['ionic'])
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/home');
+
+});
+
+craftEd.config(function ($httpProvider) {
+  $httpProvider.defaults.headers.common = {};
+  $httpProvider.defaults.headers.post = {};
+  $httpProvider.defaults.headers.put = {};
+  $httpProvider.defaults.headers.patch = {};
 });
