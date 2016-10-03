@@ -5,14 +5,13 @@ var config = {
 };
 
 
-craftEd.controller('UserController', ['auth', '$scope', '$http', '$location', '$ionicPopup',function(auth, $scope, $http, $location, $ionicPopup){
+craftEd.controller('UserController', ['$scope', '$http', '$location', '$ionicPopup',function($scope, $http, $location, $ionicPopup){
 
   function storeSession(response) {
     window.sessionStorage.token = response.headers('access-token');
     window.sessionStorage.client = response.headers('client');
     window.sessionStorage.expiry = response.headers('expiry');
     window.sessionStorage.uid = response.headers('uid')
-
   };
 
   showAlert = function(alert) {
@@ -39,9 +38,7 @@ craftEd.controller('UserController', ['auth', '$scope', '$http', '$location', '$
     login = {email: $scope.email, password: $scope.password};
     $http.post(rootUrl +'/v1/auth/sign_in', login, config)
       .then(function(response){
-        globalResponse = response
-        console.log(response.data)
-        console.log()
+        globalResponse = response;
         storeSession(response);
       })
     $location.path('#/home');
