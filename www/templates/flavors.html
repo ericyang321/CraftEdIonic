@@ -4,9 +4,10 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   <div ng-controller="FlavorController">
     <div ng-repeat="flavor in allFlavors">
-      <p>{{flavor.flavor}}</p>
+      <p>{{flavor[1]}}</p>
     </div>
   <a href="#/new_recs" class="button button-positive">Next</a>
+  <a href="#/home" class="button button-positive">Home</a>
   </div>
   </ion-content>
 </ion-view>
