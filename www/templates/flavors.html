@@ -1,10 +1,9 @@
 <ion-view view-title="Get Started(flavors)">
   <ion-content>
-    <div class='title-coaster'><span class='flavors-title'>Pick Some Flavors!</span></div>
+<!-- 
+  <div class='title-coaster'><span class='flavors-title'>Pick Some Flavors!</span></div>
 
-    <div class='flavors-description'>
-      <p class='p-description'>To help us better find beer you love, choose the flavors you normally like in food.</p>
-    </div>
+    
 
   <form name="flavorForm" ng-controller="FlavorController">
     <div class='flavor-container'>
@@ -16,7 +15,27 @@
 
     <div class='flavors-custom-container'>
       <button ng-submit="submitFlavors()" class="button button-block button-positive" type="submit">Submit</button>
+    </div> -->
+<!-- Separation -->
+  <div class='title-coaster'><span class='flavors-title'>Pick Some Flavors!</span></div>
+    <div class='flavors-description'>
+      <p class='p-description'>To help us better find beer you love, choose the flavors you normally like in food.</p>
     </div>
+
+    <form name="myForm" ng-controller="FlavorController">
+      <div class='flavor-container'>
+      <label ng-repeat="flavor in allFlavors">
+        <input
+          type="checkbox"
+          name="selectedFruits[]"
+          value="{{flavor}}"
+          ng-checked="selection.indexOf(flavor) > -1"
+          ng-click="toggleSelection(flavor)"
+        > {{flavor[1]}}
+      </label>
+      </div>
+      <button ng-click="submitFlavors()" class="button button-block button-positive" type="submit">Submit</button>
+
     </form>
   </ion-content>
 </ion-view>
