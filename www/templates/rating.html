@@ -2,13 +2,17 @@
   <ion-content>
     <h1 class="title">Rate these Beers</h1>
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-    <rating ng-model="rating.rate" max="rating.max"></rating>
-    <a href="#/rating_confirm" class="button button-positive">Submit</a>
+
     <div>
       <h3>Tags</h3>
-      <p>Tag 1</p>
-      <p>Tag 2</p>
-      <p>Tag 3</p>
     </div>
+
+    <form ng-controller="RatingController" ng-submit="submitRating()">
+    <select ng-model="rating" multiple>
+      <option ng-repeat="rating in allRatings" value="{{rating.id}}">{{flavor.flavor}}</option>
+    </select>
+    <button class="button button-block button-positive" type="submit">Submit</button>
+    </form>
+
   </ion-content>
 </ion-view>
