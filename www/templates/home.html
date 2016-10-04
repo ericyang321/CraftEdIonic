@@ -1,11 +1,23 @@
 <ion-view view-title="Home">
   <ion-content>
-    <h1>CraftEd</h1>
-      <p>Add description...</p>
-      <a href="#/register" class="button button-positive">Register</a>
-      <a href="#/login" class="button button-positive">Login</a>
-      <a href="#/new_recs" class="button button-positive">New Recs</a>
-      <a href="#/flavors" class="button button-positive">Flavors</a>
-      <form name="logoutForm" ng-controller="UserController"><button ng-click="logout()" class="button button-block button-positive" type="submit">Log Out</button></form>
+    <div class='title-coaster'><h1 class='home-title'>CraftEd</h1></div>
+      <p class='home-description larger'>Create an Account or Login to Get Started</p>
+        <div class='home-button-container'>
+          <a href="#/register" class="button home">Register</a>
+          <a href="#/login" class="button home">Login</a>
+          <a href="#/new_recs" class="button home">New Recs</a>
+          <a href="#/flavors" class="button home">Flavors</a>
+        </div>
+
+      <form name="logoutForm" ng-controller="UserController">
+          <button ng-click="logout()" class="button home" type="submit">Log Out</button>
+      </form>
+
+      <div class='home-card'>
+      <p class='home-description'>
+          A really solid description about the purpose of our app. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus vitae sapien quis tincidunt. Duis aliquam massa odio, id porttitor neque pulvinar sit amet. 
+      </p>
+    </div>
+
   </ion-content>
 </ion-view>
