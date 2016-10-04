@@ -5,7 +5,7 @@
 
   <form ng-controller="FlavorController">
     <select ng-model="flavor" multiple>
-      <option ng-repeat="flavor in allFlavors" value="{{flavor.id}}">{{flavor.flavor}}</option>
+      <option ng-repeat="flavor in allFlavors" value="{{flavor[0]}}">{{flavor[1]}}</option>
     </select>
     <button class="button button-block button-positive" type="submit">Submit</button>
     </form>
