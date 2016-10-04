@@ -7,7 +7,7 @@ craftEd.controller('FlavorController', ['$scope', '$http', '$location', '$ionicP
     }
   };
 
-  var tokens = {
+  var tokensConfig = {
     headers: {
       'content-type': 'application/json',
       "access-token": window.sessionStorage.token,
@@ -18,7 +18,7 @@ craftEd.controller('FlavorController', ['$scope', '$http', '$location', '$ionicP
     }
   };
 
-  var tokensConfig = {
+  var tokens = {
     headers: {
       "access-token": window.sessionStorage.token,
       "token-type": "Bearer",
@@ -28,9 +28,7 @@ craftEd.controller('FlavorController', ['$scope', '$http', '$location', '$ionicP
     }
   };
 
-  // console.log(tokens)
-
-  $http.get(rootUrl +'/users/:user_id/flavors/new', tokens)
+  $http.get(rootUrl +'/users/:user_id/flavors/new', tokensConfig)
     .then(function(response){
       $scope.allFlavors = response.data
 
@@ -60,11 +58,10 @@ craftEd.controller('FlavorController', ['$scope', '$http', '$location', '$ionicP
 
     $scope.submitFlavors = function(){
       data = {flavorid: $scope.selection};
-      console.log(data);
-      $http.post(rootUrl +'/users/:user_id/flavors', data, tokensConfig )
+      $http.post(rootUrl +'/users/:user_id/flavors', data, tokens)
         .then(function(response){
       })
-      $location.path('#/home');
+      $location.path('#/new_recs');
   }
 
 }]);

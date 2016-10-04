@@ -7,12 +7,17 @@
       <h3>Tags</h3>
     </div>
 
-    <form ng-controller="RatingController" ng-submit="submitRating()">
-    <select ng-model="rating" multiple>
-      <option ng-repeat="rating in allRatings" value="{{rating[0]}}">{{rating[1]}}</option>
-    </select>
-    <button class="button button-block button-positive" type="submit">Submit</button>
+    <form name="tagForm" ng-controller="RatingController">
+      <label ng-repeat="tag in allTags">
+      <input
+      type="checkbox"
+      name="selectedTag[]"
+      value="{{tag}}"
+      ng-checked="selection.indexOf(tag) > -1"
+      ng-click="toggleSelection(tag)">
+      {{tag[1]}}
+      </label>
+      <button ng-click="selectTag()" class="button button-block button-positive" type="submit">Submit</button>
     </form>
-
   </ion-content>
 </ion-view>
