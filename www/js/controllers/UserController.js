@@ -7,6 +7,16 @@ var config = {
 
 craftEd.controller('UserController', ['$scope', '$http', '$location', '$ionicPopup',function($scope, $http, $location, $ionicPopup){
 
+  var tokens = {
+    headers: {
+      "access-token": window.sessionStorage.token,
+      "token-type": "Bearer",
+      "client": window.sessionStorage.client,
+      "expiry": window.sessionStorage.expiry,
+      "uid": window.sessionStorage.uid
+    }
+  };
+
   function storeSession(response) {
     window.sessionStorage.token = response.headers('access-token');
     window.sessionStorage.client = response.headers('client');
