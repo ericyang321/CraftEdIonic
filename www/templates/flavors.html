@@ -27,7 +27,6 @@
       <label ng-repeat="flavor in allFlavors">
         <input
           type="checkbox"
-          name="selectedFruits[]"
           value="{{flavor}}"
           ng-checked="selection.indexOf(flavor) > -1"
           ng-click="toggleSelection(flavor)"
