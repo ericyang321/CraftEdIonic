@@ -15,6 +15,7 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
+@import 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css';
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -26,6 +27,7 @@ $dark:                            #444 !default;
   used under CC BY http://creativecommons.org/licenses/by/4.0/
   Modified icons to fit ionicon’s grid from original.
 */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400|Sanchez';
 @font-face {
   font-family: "Ionicons";
   src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1");
@@ -9814,3 +9816,409 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+.scroll-content {
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400; }
+
+.title.title-center.header-item {
+  font-family: "Sanchez", serif;
+  font-size: 1.5em;
+  color: #222222; }
+
+.bar.bar-stable {
+  background-color: white;
+  border: none; }
+
+.title {
+  color: #222222; }
+
+.home-button-container {
+  display: block;
+  margin: 0 auto; }
+
+.button.home {
+  display: block;
+  width: 50%;
+  height: 10%;
+  border: 1px solid white;
+  background-color: #ffd966;
+  margin: 0 auto;
+  max-width: 200px;
+  margin-bottom: 4%;
+  margin-top: 4%;
+  font-family: "Sanchez", serif; }
+
+.home-description {
+  padding: 5%; }
+
+.home-description.larger {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Sanchez", serif; }
+
+.title-coaster {
+  text-align: center;
+  margin: 1%;
+  padding: 10px;
+  background-color: black;
+  width: 120px;
+  height: 120px;
+  color: #222222;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+
+.home-title {
+  font-family: "Sanchez", serif;
+  font-size: 1.5em;
+  color: white;
+  line-height: 120px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.home-card {
+  background-color: white;
+  border: 1px solid #e8e8e8;
+  padding: 1%;
+  margin: 5%;
+  line-height: 1.5;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.item {
+  border: none;
+  margin: 4%; }
+
+.item.item-input {
+  border-bottom: 1px solid #e8e8e8; }
+
+.button.button-block {
+  min-width: 50%;
+  max-width: 60%;
+  background-color: #ffd966;
+  margin: 0 auto;
+  font-family: "Sanchez", serif;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.flavors-title {
+  font-size: 1.3em;
+  color: white;
+  top: 20px;
+  display: inline-block;
+  font-family: "Sanchez", serif;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.flavor-container {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 320px; }
+
+.flavor-choose-button {
+  display: inline-block;
+  color: #d9d9d9;
+  margin: 3%;
+  font-family: "Sanchez", serif;
+  border: 1px solid #ffd966;
+  padding: 20px;
+  min-width: 100px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.flavors-description {
+  padding: 10px;
+  margin: 10px;
+  text-align: center; }
+
+.selected {
+  color: black;
+  background-color: #ffd966;
+  font-weight: bold; }
+
+.button.flavors-custom {
+  background-color: white;
+  text-decoration: underline; }
+
+.flavors-custom-container {
+  margin: 30px;
+  text-align: right; }
+
+.flavor-wheel {
+  margin: 5%; }
+
+.flavor-wheel-legend {
+  margin: 5%; }
+
+.button.recommendation-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding: 3%;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #ffd966;
+  border: 1px solid #ffd966;
+  box-shadow: 0.5px 1px 0.5px rgba(0, 0, 0, 0.3);
+  max-width: 300px; }
+
+.recommendation-button-container {
+  border-bottom: 1px solid #e8e8e8; }
+
+.profile-title {
+  font-family: "Sanchez", serif;
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.seem-to-preference-container {
+  display: block;
+  background-color: white;
+  border: 1px solid #e8e8e8;
+  padding: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin: 0 auto;
+  max-width: 300px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.seem-to-preference-title {
+  font-family: "Sanchez", serif;
+  font-size: 1.5em; }
+
+.coasters-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column; }
+
+.coaster-bar {
+  margin-left: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 15%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+  flex-direction: row; }
+
+.slide {
+  font-size: 0.8em;
+  color: gray;
+  align-items: baseline;
+  -webkit-background-clip: text; }
+
+.coaster {
+  position: relative;
+  margin-left: 30px;
+  width: 100px;
+  height: 100px;
+  font-size: 1em;
+  line-height: 100px;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+
+.sliders-title-container {
+  text-align: center;
+  margin: 10px; }
+
+.sliders-title {
+  font-family: "Sanchez", serif;
+  font-size: 1.2em; }
+
+.coaster-beer-name {
+  text-transform: uppercase; }
+
+.coaster.blonde {
+  background-color: #ffd966;
+  color: #222222; }
+
+.coaster.light-brown {
+  background-color: #bf9000;
+  color: #ffffff; }
+
+.coaster.dark-brown {
+  background-color: #7f6000;
+  color: #ffffff; }
+
+.coaster.darker-brown {
+  background-color: #3E2723;
+  color: #ffffff; }
+
+.coaster.black {
+  background-color: #212121;
+  color: #ffffff; }
+
+.rating-title {
+  font-family: "Sanchez", serif;
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.rating-card {
+  background-color: white;
+  border: 1px solid #e8e8e8;
+  padding: 5%;
+  margin: 0 auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  max-width: 328px; }
+
+.beer-rating-card {
+  background-color: white;
+  border: 1px solid #e8e8e8;
+  padding: 5%;
+  margin: 0 auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-size: 1.1em;
+  line-height: 1.5;
+  min-height: 200px;
+  text-align: center;
+  max-width: 328px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.starRating {
+  margin-left: 20%; }
+
+.submit-container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5%; }
+
+.custom-submit {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ffd966;
+  background-color: #ffd966;
+  max-width: 323px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.rating-text {
+  text-align: center; }
+
+.star-chart {
+  display: block; }
+
+.tag {
+  text-align: center;
+  display: inline-block;
+  padding: 3%;
+  font-size: 0.8em;
+  color: #d6d6d6;
+  border: 1px solid #ffd966;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.selected {
+  color: #222222; }
+
+.beerRate:not(old) {
+  display: inline-block;
+  height: 1.5em;
+  vertical-align: bottom;
+  padding-top: 30px; }
+
+.beerRate:not(old) > label {
+  display: block;
+  float: right;
+  width: 5em;
+  position: relative;
+  background: url("unclicked.png");
+  background-size: contain; }
+
+.beerRate:not(old) > label:before {
+  content: '';
+  display: block;
+  width: 5em;
+  height: 5em;
+  background: url("clicked.png");
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 0.2s linear; }
+
+.beerRate:not(old) > label:hover:before,
+.beerRate:not(old) > label:hover ~ label:before,
+.beerRate:not(:hover) > :checked ~ label:before {
+  opacity: 1; }
+
+.beerRate:not(old) > input {
+  margin-right: -50px;
+  opacity: 0;
+  overflow: hidden; }
+
+.rating_confirm-title {
+  display: inline-block;
+  font-family: "Sanchez", serif;
+  font-size: 2em;
+  text-align: center; }
+
+.confirm-title-holder {
+  display: block;
+  text-align: center;
+  margin-top: 5%; }
+
+.rating-card.beer-detailed-description {
+  text-align: left; }
+
+.beer-detailed-title {
+  font-family: "Sanchez", serif;
+  font-size: 2em;
+  text-align: center; }

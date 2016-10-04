@@ -19,8 +19,16 @@ $dark:                            #444 !default;
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
+@import 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css';
 @import "../www/lib/ionic/scss/ionic";
-// Custom SCSS by user
-// Type in "gulp" into terminal to apply custom changes
-@import '../scss/index/navbar';
-@import '../scss/sidebar/sidebar';
+// Custom
+@import '../scss/layout/layout';
+@import '../scss/menu/menu';
+@import '../scss/layout/home';
+@import '../scss/layout/login&register';
+@import '../scss/layout/flavors';
+@import '../scss/layout/profile';
+@import '../scss/layout/listSliders';
+@import '../scss/layout/rating';
+@import '../scss/layout/rating_confirm';
+
