@@ -2,12 +2,12 @@
   <ion-content>
     <h1 class="title">Flavors</h1>
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-  <div ng-controller="FlavorController">
-    <div ng-repeat="flavor in allFlavors">
-      <p>{{flavor[1]}}</p>
-    </div>
-  <a href="#/new_recs" class="button button-positive">Next</a>
-  <a href="#/home" class="button button-positive">Home</a>
-  </div>
+
+  <form ng-controller="FlavorController">
+    <select ng-model="flavor" multiple>
+      <option ng-repeat="flavor in allFlavors" value="{{flavor[0]}}">{{flavor[1]}}</option>
+    </select>
+    <button class="button button-block button-positive" type="submit">Submit</button>
+    </form>
   </ion-content>
 </ion-view>

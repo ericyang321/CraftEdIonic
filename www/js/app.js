@@ -39,6 +39,7 @@ var craftEd = angular.module('craftEd', ['ionic'])
     controller: 'UserController'
   })
 
+
   .state('login', {
     url: '/login',
     templateUrl: 'templates/login.html',
@@ -63,7 +64,7 @@ var craftEd = angular.module('craftEd', ['ionic'])
   })
 
   .state('rating', {
-    url: '/rating',
+    url: '/rating/{id}',
     templateUrl: 'templates/rating.html',
     controller: 'RatingController'
   })
