@@ -19,4 +19,14 @@ craftEd.controller('FlavorController', ['$scope', '$http', function($scope, $htt
    .then(function(response){
       $scope.allFlavors = response.data
     });
+
+  $scope.submitFlavors = function(){
+   data = {};
+   $http.post(rootUrl +'/v1/auth/users/:user_id/flavors', data, config)
+      .then(function(response){
+        storeSession(response);
+      })
+    $location.path('#/home');
+  }
+
 }]);
