@@ -56,12 +56,13 @@ var craftEd = angular.module('craftEd', ['ionic'])
   .state('new_recs', {
     url: '/new_recs',
     templateUrl: 'templates/new_recs.html',
-    controller: 'RecsController'
+    controller: 'NewRecController'
   })
 
   .state('old_likes', {
     url: '/old_likes',
-    templateUrl: 'templates/old_likes.html'
+    templateUrl: 'templates/old_likes.html',
+    controller: 'OldLikeController'
   })
 
   .state('rating', {

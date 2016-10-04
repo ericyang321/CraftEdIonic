@@ -1,11 +1,10 @@
 <ion-view view-title="NewRecs">
   <ion-content>
-    <h1 class="title">New Recommendations</h1>
+    <h1 class="title">{{title}}</h1>
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-
-    <div ng-controller="RecsController">
-      <div ng-repeat="newRec in allNewRecs">
-        <button ng-click="selectBeer({{newRec[0]}})" class="button   button-block button-positive">{{newRec[1]}}</button>
+    <div ng-controller="NewRecController">
+      <div ng-repeat="rec in allRecs">
+        <button ng-click="selectBeer({{rec[0]}})" class="button button-block button-positive">{{rec[1]}}</button>
       </div>
     </div>
   </ion-content>
