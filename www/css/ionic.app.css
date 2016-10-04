@@ -9673,10 +9673,14 @@ a.button {
   transform: translateY(-50%); }
 
 .home-card {
+  display: block;
   background-color: white;
   border: 1px solid #e8e8e8;
   padding: 1%;
-  margin: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin: 0 auto;
+  max-width: 300px;
   line-height: 1.5;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -9882,6 +9886,7 @@ a.button {
   font-family: "Sanchez", serif;
   font-size: 1.5em;
   color: white;
+  line-height: 1.1;
   text-align: center;
   display: inline-block;
   position: relative;
@@ -9891,6 +9896,7 @@ a.button {
   transform: translateY(-50%); }
 
 .rating-card {
+  display: block;
   background-color: white;
   border: 1px solid #e8e8e8;
   padding: 5%;
@@ -9900,10 +9906,10 @@ a.button {
   font-size: 1.1em;
   line-height: 1.5;
   text-align: center;
+  max-width: 300px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  border-radius: 8px;
-  max-width: 328px; }
+  border-radius: 8px; }
 
 .beer-rating-card {
   background-color: white;
@@ -9916,7 +9922,7 @@ a.button {
   line-height: 1.5;
   min-height: 200px;
   text-align: center;
-  max-width: 328px;
+  max-width: 300px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
