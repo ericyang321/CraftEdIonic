@@ -9,7 +9,7 @@
 
     <form ng-controller="RatingController" ng-submit="submitRating()">
     <select ng-model="rating" multiple>
-      <option ng-repeat="rating in allRatings" value="{{rating.id}}">{{flavor.flavor}}</option>
+      <option ng-repeat="rating in allRatings" value="{{rating[0]}}">{{rating[1]}}</option>
     </select>
     <button class="button button-block button-positive" type="submit">Submit</button>
     </form>
