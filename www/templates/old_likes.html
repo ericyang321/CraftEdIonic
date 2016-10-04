@@ -1,6 +1,11 @@
 <ion-view view-title="OldLikes">
   <ion-content>
-    <h1 class="title">Tried & True Favorites</h1>
+    <h1 class="title">{{title}}</h1>
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    <div ng-controller="OldLikeController">
+      <div ng-repeat="rec in allRecs">
+        <button ng-click="selectBeer({{rec[0]}})" class="button button-block button-positive">{{rec[1]}}</button>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
