@@ -1,4 +1,4 @@
-craftEd.controller('NewRecController', ['$scope', '$http', '$location', function($scope, $http, $location){
+craftEd.controller('NewRecController', ['$scope', '$http', '$location', '$state',function($scope, $http, $location, $state){
 
   var config = {
     headers: {
@@ -29,15 +29,12 @@ craftEd.controller('NewRecController', ['$scope', '$http', '$location', function
 
   $http.get(rootUrl + '/users/:user_id/beer_types/rec_new', tokens)
     .then(function(response){
-      console.log(response.data)
       $scope.allRecs= response.data
       $scope.rootUrl= rootUrl
       $scope.title = "Beers I've never tried"
-      $scope.myController = "NewRecController"
     });
 
   $scope.selectBeer = function(newRecId){
-    $http.get(rootUrl + '/users/:user_id/beer_types/' + newRecId + '/tried_beer_ratings/new', tokens)
-    $location.path('/rating');
+    $state.go('rating',{beerId: newRecId})
   }
 }]);

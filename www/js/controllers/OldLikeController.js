@@ -1,4 +1,4 @@
-craftEd.controller('OldLikeController', ['$scope', '$http', '$location', function($scope, $http, $location){
+craftEd.controller('OldLikeController', ['$scope', '$http', '$location', '$state', function($scope, $http, $location, $state){
 
   var config = {
     headers: {
@@ -27,7 +27,7 @@ craftEd.controller('OldLikeController', ['$scope', '$http', '$location', functio
     }
   };
 
-  $http.get(rootUrl + '/users/:id/beer_types/rec_like', tokens)
+  $http.get(rootUrl + '/users/:user_id/beer_types/rec_like', tokens)
     .then(function(response){
       $scope.allRecs = response.data
       $scope.rootUrl = rootUrl
@@ -35,7 +35,6 @@ craftEd.controller('OldLikeController', ['$scope', '$http', '$location', functio
     });
 
   $scope.selectBeer = function(newRecId){
-    $http.get(rootUrl +'/users/:user_id/beer_types/' + newRecId + '/tried_beer_ratings/new', tokens)
-    $location.path('/rating');
+    $state.go('rating',{beerId: newRecId})
   }
 }]);
