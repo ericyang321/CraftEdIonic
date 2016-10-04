@@ -39,16 +39,20 @@ craftEd.controller('FlavorController', ['$scope', '$http', '$location', '$ionicP
 
       // toggle selection for a given flavor by ID
       $scope.toggleSelection = function toggleSelection(flavor) {
+        var flavorSelector = angular.element(document.querySelector('checkboxes'));
+
         var idx = $scope.selection.indexOf(flavor[0]);
 
         // is currently selected
         if (idx > -1) {
           $scope.selection.splice(idx, 1);
+          document.getElementById("flavor-label-" + flavor[0]).className = " flavor-choose-button ng-binding"
         }
 
         // is newly selected
         else {
           $scope.selection.push(flavor[0]);
+          document.getElementById("flavor-label-" + flavor[0]).className += " selected"
         }
         // console.log(selection)
       };
@@ -56,6 +60,7 @@ craftEd.controller('FlavorController', ['$scope', '$http', '$location', '$ionicP
 
     $scope.submitFlavors = function(){
       data = {flavorid: $scope.selection};
+      console.log(data);
       $http.post(rootUrl +'/users/:user_id/flavors', data, tokensConfig )
         .then(function(response){
       })
