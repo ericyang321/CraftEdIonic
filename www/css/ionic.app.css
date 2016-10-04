@@ -9611,12 +9611,30 @@ a.button {
   font-size: 1.5em;
   color: #222222; }
 
-.bar.bar-stable {
-  background-color: white;
-  border: none; }
+[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+  background: white;
+  border-bottom: 1px solid #e8e8e8; }
 
 .title {
   color: #222222; }
+
+.title.burger-menu-title {
+  font-family: "Sanchez", serif;
+  font-weight: bold;
+  font-size: 1.5em; }
+
+.bar-stable.menu-bar {
+  background: #ffd966; }
+
+.menu-item-content {
+  font-family: "Sanchez", serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  text-align: left;
+  padding-left: 20px; }
+
+.logout-button {
+  color: #D84315; }
 
 .home-button-container {
   display: block;
