@@ -38,7 +38,6 @@ craftEd.controller('UserController', ['$scope', '$http', '$location', '$ionicPop
     login = {email: $scope.email, password: $scope.password};
     $http.post(rootUrl +'/v1/auth/sign_in', login, config)
       .then(function(response){
-        globalResponse = response;
         storeSession(response);
       })
     $location.path('#/home');

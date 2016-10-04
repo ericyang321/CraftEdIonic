@@ -17,7 +17,6 @@ craftEd.controller('FlavorController', ['$scope', '$http', function($scope, $htt
     tokens
   )
    .then(function(response){
-    console.log(response)
       $scope.allFlavors = response.data
     });
 }]);
