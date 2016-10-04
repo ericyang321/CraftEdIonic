@@ -2,23 +2,17 @@
   <ion-content>
     <h1 class="title">Flavors</h1>
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-
-  <form name="flavorForm" ng-controller="FlavorController">
-   <div class="list">
-    <div ng-repeat="flavor in allFlavors">
-    <ion-item>
-      <ion-select ngModel="flavor" multiple="true">
-      <ion-option>{{flavor[1]}}</ion-option>
-      </ion-select>
-    </ion-item>
-    </div>
-
-      <!-- <label class="item item-input">
-        <span class="input-label">{{flavor[1]}}</span>
-        <input type="text" value="{{flavor[0]}}" ng-model="flavor">
+    <form name="myForm" ng-controller="FlavorController">
+      <label ng-repeat="flavor in allFlavors">
+        <input
+          type="checkbox"
+          name="selectedFruits[]"
+          value="{{flavor}}"
+          ng-checked="selection.indexOf(flavor) > -1"
+          ng-click="toggleSelection(flavor)"
+        > {{flavor[1]}}
       </label>
-    </div> -->
-    <button ng-submit="submitFlavors()" class="button button-block button-positive" type="submit">Submit</button>
+      <button ng-click="submitFlavors()" class="button button-block button-positive" type="submit">Submit</button>
     </form>
   </ion-content>
 </ion-view>

@@ -1,11 +1,12 @@
-var config = {
-  headers: {
-    'content-type': 'application/json'
-  }
-};
 
 
 craftEd.controller('UserController', ['$scope', '$http', '$location', '$ionicPopup',function($scope, $http, $location, $ionicPopup){
+
+  var config = {
+    headers: {
+      'content-type': 'application/json'
+    }
+  };
 
   var tokens = {
     headers: {
@@ -34,7 +35,10 @@ craftEd.controller('UserController', ['$scope', '$http', '$location', '$ionicPop
   $scope.register = function(){
     if($scope.password === $scope.password_confirmation) {
       register = {email: $scope.email, password: $scope.password, password_confirmation: $scope.password_confirmation};
-      $http.post(rootUrl + '/v1/auth', register, config);
+      $http.post(rootUrl + '/v1/auth', register, config)
+        .then(function(response){
+          storeSession(response);
+        })
       $location.path('#/flavors');
     }
     else {
@@ -55,5 +59,6 @@ craftEd.controller('UserController', ['$scope', '$http', '$location', '$ionicPop
 
   $scope.logout = function() {
     window.sessionStorage.clear();
+    // $ionicHistory.nextViewOptions({ disableBack: true, historyRoot: true });
   };
 }]);
