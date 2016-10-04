@@ -12,7 +12,7 @@
           id="flavor-{{flavor[0]}}"
           type="checkbox"
           class='checkboxes'
-          name="selectionBeer"
+          name="selectionBeer[]"
           value="{{flavor[0]}}"
           ng-checked="selection.indexOf(flavor) > -1"
           ng-click="toggleSelection(flavor)"

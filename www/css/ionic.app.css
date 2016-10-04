@@ -10003,14 +10003,20 @@ a.button {
 .confirm-title-holder {
   display: block;
   text-align: center;
-  margin-top: 5%; }
+  margin: 0 auto;
+  margin-top: 5%;
+  max-width: 300px; }
 
 .rating-card.beer-detailed-description {
   text-align: left; }
 
+.rating_confirm-content {
+  font-size: 1.3em; }
+
 .beer-detailed-title {
   font-family: "Sanchez", serif;
   font-size: 2em;
-  text-align: center; }
+  text-align: left;
+  line-height: 1.5; }
 
 /*# sourceMappingURL=ionic.app.css.map */
