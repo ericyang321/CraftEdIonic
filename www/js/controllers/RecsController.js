@@ -34,7 +34,6 @@ craftEd.controller('RecsController', ['$scope', '$http', '$location', function($
     });
 
   $scope.selectBeer = function(newRecId){
-    console.log(rootUrl +'/users/:user_id/beer_types/' + newRecId + '/tried_beer_ratings/new')
     $http.get(rootUrl +'/users/:user_id/beer_types/' + newRecId + '/tried_beer_ratings/new', tokens)
     $location.path('/rating');
   }
