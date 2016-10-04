@@ -27,9 +27,10 @@ craftEd.controller('RatingController', ['$scope', '$http', '$location', function
     }
   };
 
-  $http.get(rootUrl + '/users/:id/beer_types/:id/tried_beer_ratings/new', tokensConfig)
+  $http.get(rootUrl + '/users/:user_id/beer_types/:beer_type_id/tried_beer_ratings/new', tokensConfig)
     .then(function(response){
       $scope.allTags= response.data
+  console.log(response)
 
       $scope.selection = [];
       $scope.toggleSelection = function toggleSelection(tag) {
@@ -46,8 +47,8 @@ craftEd.controller('RatingController', ['$scope', '$http', '$location', function
     });
 
   $scope.selectTags = function(){
-    data = {tagid: $scope.selection};
-    $http.post(rootUrl +'/users/:user_id/flavors', data, tokens)
+    data = {tagId: $scope.selection};
+    $http.post(rootUrl +'/users/:user_id/tried_beer_ratings', data, tokens)
       .then(function(response){
     })
     $location.path('/info');
