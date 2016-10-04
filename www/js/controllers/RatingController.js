@@ -1,10 +1,12 @@
-craftEd.controller('RatingController', ['$scope', '$http', '$location', function($scope, $http, $location) {
+craftEd.controller('RatingController', ['$scope', '$http', '$location', '$state',function($scope, $http, $location, $state) {
 
   var config = {
     headers: {
       'content-type': 'application/json'
     }
-  };
+  }
+
+  var beerId = $state.params.beerId;
 
   var tokens = {
     headers: {
@@ -27,10 +29,9 @@ craftEd.controller('RatingController', ['$scope', '$http', '$location', function
     }
   };
 
-  $http.get(rootUrl + '/users/:user_id/beer_types/:beer_type_id/tried_beer_ratings/new', tokensConfig)
+  $http.get(rootUrl + '/users/:user_id/beer_types/' + beerId + '/tried_beer_ratings/new', tokensConfig)
     .then(function(response){
       $scope.allTags= response.data
-  console.log(response)
 
       $scope.selection = [];
       $scope.toggleSelection = function toggleSelection(tag) {
@@ -46,8 +47,8 @@ craftEd.controller('RatingController', ['$scope', '$http', '$location', function
       };
     });
 
-  $scope.selectTags = function(){
-    data = {tagId: $scope.selection};
+  $scope.submitRating = function(){
+    data = {tagIds: $scope.selection, comment: $scope.comment, rating: $scope.rating};
     $http.post(rootUrl +'/users/:user_id/tried_beer_ratings', data, tokens)
       .then(function(response){
     })

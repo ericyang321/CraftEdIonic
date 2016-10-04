@@ -66,7 +66,7 @@ var craftEd = angular.module('craftEd', ['ionic'])
   })
 
   .state('rating', {
-    url: '/rating',
+    url: '/rating/:beerId',
     templateUrl: 'templates/rating.html',
     controller: 'RatingController'
   })
