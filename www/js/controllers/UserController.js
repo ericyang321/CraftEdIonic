@@ -50,7 +50,7 @@ craftEd.controller('UserController', ['$scope', '$http', '$location', '$ionicPop
       .then(function(response){
         storeSession(response);
       })
-    $location.path('#/home');
+    $location.path('#/profile');
   }
 
   $scope.logout = function() {
