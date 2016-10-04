@@ -1,0 +1,52 @@
+.flavors-title{
+    font-size: 1.3em;
+    color: white;
+    top: 20px;
+    display: inline-block;
+    font-family: $sanchez;
+    @include vertical-snap();
+}
+
+.flavor-container{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 320px;
+}
+
+.checkboxes{
+    display: none;
+}
+
+.flavor-choose-button{
+    display: inline-block;
+    color: #d9d9d9;
+    margin: 3%;
+    font-family: $sanchez;
+    border: 1px solid $blonde;
+    padding: 20px;
+    min-width: 100px;
+    @include border-radius(8px);
+}
+
+.flavors-description{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.selected{
+    color: black;
+    background-color: $blonde;
+    font-weight: bold;
+}
+
+.button.flavors-custom{
+    background-color: white;
+    text-decoration: underline;
+}
+
+.flavors-custom-container{
+    margin: 30px;
+    text-align: right;
+}

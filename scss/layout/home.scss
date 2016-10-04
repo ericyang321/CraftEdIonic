@@ -1,0 +1,60 @@
+.home-button-container{
+    display: block;
+    margin: 0 auto;
+}
+
+.button.home{
+    display: block;
+    width: 50%;
+    height: 10%;
+    border: 1px solid white;
+    background-color: $blonde;
+    margin: 0 auto;
+    max-width: 200px;
+    margin-bottom: 4%;
+    margin-top: 4%;
+    font-family: $sanchez;
+    @include border-radius(8px);
+}
+
+.home-description{
+    padding: 5%;
+}
+
+.home-description.larger{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: $sanchez;
+}
+
+.title-coaster{
+    text-align: center;
+    margin: 1%;
+    padding: 10px;
+    background-color: black;
+    width: 120px;
+    height: 120px;
+    color: #222222;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    @include border-radius(50%);
+}
+
+.home-title{
+    font-family: $sanchez;
+    font-size: 1.5em;
+    color: white;
+    line-height: 120px;
+    text-align: center;
+    @include vertical-snap();
+}
+
+.home-card{
+    background-color: white;
+    border: 1px solid #e8e8e8;
+    padding: 1%;
+    margin: 5%;
+    line-height: 1.5;
+    @include border-radius(8px);
+}
