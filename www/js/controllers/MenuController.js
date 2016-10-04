@@ -6,6 +6,17 @@
   //});
 
   craftEd.controller('MenuController', ['$scope', '$ionicSideMenuDelegate', function($scope, $ionicSideMenuDelegate) {
+    var tokens = {
+      headers: {
+        "access-token": window.sessionStorage.token,
+        "token-type": "Bearer",
+        "client": window.sessionStorage.client,
+        "expiry": window.sessionStorage.expiry,
+        "uid": window.sessionStorage.uid
+      }
+    };
+
+
   $scope.toggleLeft = function() {
     $ionicSideMenuDelegate.toggleLeft();
   };
