@@ -1,0 +1,98 @@
+@mixin shadow{
+    -webkit-box-shadow: 0 0 1px black;
+    -moz-box-shadow: 0 0 1px black;
+    box-shadow: 0 0 1px black;
+}
+
+@mixin flex-container{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-bar{
+    margin-left: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 15%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: nowrap; 
+    flex-wrap: nowrap;
+    -webkit-align-items: baseline; 
+    align-items: baseline;
+    flex-direction: row;
+}
+
+.coasters-container{
+    @include flex-container;
+}
+
+.coaster-bar{
+    @include flex-bar
+}
+
+.slide{
+   font-size: 0.8em;
+   color: gray;
+   align-items: baseline;
+    -webkit-background-clip: text;
+}
+
+.coaster{
+    position: relative;
+    margin-left: 30px;
+    width: 100px;
+    height: 100px;
+    font-size: 1em;
+    line-height: 100px;
+    text-align: center;
+    @include border-radius(50%);
+}
+
+.sliders-title-container{
+    text-align: center;
+    margin: 10px;
+}
+
+.sliders-title{
+    font-family: $sanchez;
+    font-size: 1.2em;
+}
+
+.coaster-beer-name{
+    text-transform: uppercase;
+}
+
+.coaster.blonde{
+    background-color: $blonde;
+    @include background-adjust($blonde);
+}
+
+.coaster.light-brown{
+    background-color: $lightBrown;
+    @include background-adjust($lightBrown);
+}
+
+.coaster.dark-brown{
+    background-color: $darkBrown;
+    @include background-adjust($darkBrown);
+}
+
+.coaster.darker-brown{
+    background-color: $darkerBrown;
+    @include background-adjust($darkerBrown);
+}
+
+.coaster.black{
+    background-color: $black;
+    @include background-adjust($black);
+}

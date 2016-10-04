@@ -1,0 +1,62 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400|Sanchez';
+// font-family: 'Sanchez', serif;
+// font-family: 'Open Sans', sans-serif;
+$sanchez: 'Sanchez', serif;
+$opensans: 'Open Sans', sans-serif;
+$blonde: #ffd966;
+$lightBrown: #bf9000;
+$darkBrown: #7f6000;
+$darkerBrown: #3E2723;
+$black: #212121;
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin vertical-snap($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin background-adjust($color) {
+  @if (lightness($color) > 50) {
+    color: #222222; 
+  } @else {
+    color: #ffffff;
+  }
+}
+
+@mixin border-radius($value){
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    border-radius: $value;
+}
+
+.scroll-content{
+    background-color: white;
+    font-family: $opensans;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.title.title-center.header-item{
+    font-family: $sanchez;
+    font-size: 1.5em;
+    color: #222222;
+}
+
+.bar.bar-stable{
+    background-color: white;
+    border: none;
+}

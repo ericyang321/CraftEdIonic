@@ -1,0 +1,18 @@
+.item{
+    border: none;
+    margin: 4%;
+}
+
+.item.item-input{
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.button.button-block{
+    min-width: 50%;
+    max-width: 60%;
+    background-color: $blonde;
+    margin: 0 auto;
+    font-family: $sanchez;
+    @include border-radius(8px);
+}
+
