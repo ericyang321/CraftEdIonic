@@ -5,7 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 
-var rootUrl = 'http://how-to-train-your-palate-api.herokuapp.com'
+// var rootUrl = 'http://how-to-train-your-palate-api.herokuapp.com'
+var rootUrl = 'http://localhost:3000'
 
 var craftEd = angular.module('craftEd', ['ionic'])
 
@@ -78,7 +79,7 @@ var craftEd = angular.module('craftEd', ['ionic'])
     url: '/profile',
     templateUrl: 'templates/profile.html'
   });
-  // if none of the above states are matched, use this as the fallback
+  // if none of the above states are matched, use this as the fall back
   $urlRouterProvider.otherwise('/home');
 
 });
