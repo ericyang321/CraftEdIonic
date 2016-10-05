@@ -6,6 +6,20 @@
   //});
 
   craftEd.controller('MenuController', ['$scope', '$ionicSideMenuDelegate', function($scope, $ionicSideMenuDelegate) {
+    $scope.$on("$ionicView.enter", function(event, data){
+      if(window.sessionStorage.length){
+        $scope.showLogin = false;
+        $scope.showRegister = false;
+        $scope.showLogout = true;
+        $scope.showProfile = true;
+      }
+      else{
+        $scope.showLogin = true;
+        $scope.showRegister = true;
+        $scope.showLogout = false;
+        $scope.showProfile = false;
+      }
+    });
     var tokens = {
       headers: {
         "access-token": window.sessionStorage.token,
@@ -15,7 +29,6 @@
         "uid": window.sessionStorage.uid
       }
     };
-
 
   $scope.toggleLeft = function() {
     $ionicSideMenuDelegate.toggleLeft();

@@ -1,5 +1,3 @@
-
-
 craftEd.controller('UserController', ['$scope', '$http', '$location', '$ionicPopup',function($scope, $http, $location, $ionicPopup){
 
   var config = {
@@ -38,9 +36,12 @@ craftEd.controller('UserController', ['$scope', '$http', '$location', '$ionicPop
       $http.post(rootUrl + '/v1/auth', register, config)
         .then(function(response){
           storeSession(response);
-        })
-      $location.path('/app/flavors');
-    }
+          $location.path('/app/flavors');
+        });
+      }
+    else if($scope.password.length < 8) {
+      showAlert("Passwords must be at least 8 characters.");
+      }
     else {
       $scope.password = "";
       $scope.password_confirmation = "";
@@ -49,16 +50,25 @@ craftEd.controller('UserController', ['$scope', '$http', '$location', '$ionicPop
   };
 
   $scope.login = function(){
+    if($scope.email && $scope.password) {
     login = {email: $scope.email, password: $scope.password};
     $http.post(rootUrl +'/v1/auth/sign_in', login, config)
       .then(function(response){
         storeSession(response);
+        $location.path('/app/profile');
       })
-    $location.path('/app/profile');
+      .catch(function(data){
+        showAlert(data.data.errors[0]);
+      });
+    }
+    else {
+      showAlert("Invalid login, please try again.");
+    }
   }
 
   $scope.logout = function() {
     window.sessionStorage.clear();
+    $location.path('/app/home');
     // $ionicHistory.nextViewOptions({ disableBack: true, historyRoot: true });
   };
 }]);

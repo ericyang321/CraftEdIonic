@@ -2,15 +2,15 @@
   <ion-header-bar>
   </ion-header-bar>
   <ion-content>
-    <form name="loginForm" ng-controller="UserController">
+    <form name="loginForm" ng-controller="UserController" novalidate>
       <div class="list">
         <label class="item item-input">
           <span class="input-label">Email</span>
-          <input type="text" ng-model="email">
+          <input type="text" ng-model="email" required>
         </label>
         <label class="item item-input">
           <span class="input-label">Password</span>
-          <input type="password" ng-model="password">
+          <input type="password" ng-model="password" required>
         </label>
         <div class='custom-button'>
           <label class="item">
