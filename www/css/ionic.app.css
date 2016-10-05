@@ -9601,7 +9601,6 @@ a.button {
   transition-duration: 0s; }
 
 .scroll-content {
-  background-color: white;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.5; }
@@ -9774,23 +9773,33 @@ a.button {
   display: block;
   width: 50%;
   height: 10%;
-  border: 1px solid white;
   background-color: #ffd966;
   margin: 0 auto;
   max-width: 200px;
-  margin-bottom: 4%;
-  margin-top: 4%;
+  margin-bottom: 15px;
+  margin-top: 15px;
   font-family: "Sanchez", serif;
+  -webkit-box-shadow: 1px 1px 1px #e8e8e8;
+  -moz-box-shadow: 1px 1px 1px #e8e8e8;
+  box-shadow: 1px 1px 1px #e8e8e8;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
+  .button.home:active {
+    border: none;
+    -webkit-box-shadow: inset 1px 1px 1px #e8e8e8;
+    -moz-box-shadow: inset 1px 1px 1px #e8e8e8;
+    box-shadow: inset 1px 1px 1px #e8e8e8; }
 
 .home-description {
-  padding: 5%; }
+  padding: 15px; }
 
 .home-description.larger {
-  text-align: center;
-  font-size: 1.5em;
+  text-align: left;
+  font-weight: bold;
+  font-color: #222;
+  line-height: 1.1;
+  font-size: 1.2em;
   font-family: "Sanchez", serif; }
 
 .title-coaster {
@@ -9798,9 +9807,9 @@ a.button {
   margin: 1%;
   padding: 10px;
   background-color: black;
-  width: 120px;
+  width: 100px;
   color: white;
-  height: 120px;
+  height: 100px;
   margin: 0 auto;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -9808,11 +9817,26 @@ a.button {
   -moz-border-radius: 50%;
   border-radius: 50%; }
 
+.home-title-coaster {
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+  background-color: black;
+  width: 190px;
+  height: 190px;
+  color: white;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+
 .home-title {
   font-family: "Sanchez", serif;
-  font-size: 1.5em;
+  font-size: 2em;
+  line-height: 1.5;
   color: white;
-  line-height: 120px;
   text-align: center;
   position: relative;
   top: 50%;
@@ -9823,16 +9847,19 @@ a.button {
 .home-card {
   display: block;
   background-color: white;
-  border: 1px solid #e8e8e8;
-  padding: 1%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  border: 1px solid white;
+  padding: 5px;
   margin: 0 auto;
-  max-width: 300px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 280px;
   line-height: 1.5;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
+
+.home-scroll-content {
+  background-color: #4EEAD2; }
 
 .item {
   border: none;

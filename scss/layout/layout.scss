@@ -9,6 +9,8 @@ $darkBrown: #7f6000;
 $darkerBrown: #3E2723;
 $black: #212121;
 
+$turq: #4EEAD2;
+
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
   @if $inset {
     -webkit-box-shadow:inset $top $left $blur $color;
@@ -29,6 +31,13 @@ $black: #212121;
   transform: translateY(-50%);
 }
 
+@mixin active{
+  &:active{
+    border: none;
+    @include box-shadow(1px, 1px, 1px, #e8e8e8, true);
+  }
+}
+
 @mixin background-adjust($color) {
   @if (lightness($color) > 50) {
     color: #222222; 
@@ -44,7 +53,6 @@ $black: #212121;
 }
 
 .scroll-content{
-    background-color: white;
     font-family: $opensans;
     font-weight: 400;
     line-height: 1.5;
