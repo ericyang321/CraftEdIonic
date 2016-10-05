@@ -3,13 +3,14 @@
     <div class='sliders-title-container'><h1 class='sliders-title'>Tried & True Favorites</h1></div>
     <!-- <button menu-toggle="left" class="button button-icon icon ion-navicon"></button> -->
 
-    <div ng-controller="RecsController">
-        <div ng-repeat="newRec in allNewRecs">
+    <div ng-controller="OldLikeController">
+        <div ng-repeat="oldRec in allRecs">
             <div class='coasters-container'>
-                <div class='coaster-bar'>
-                    <span class='slide '><span class='ion-ios-arrow-left'></span>     Slide to Rate This Beer</span>
-                    <div class='coaster blonde'>
-                        <span class='coaster-beer-name'>{{newRec[1]}}</span>
+                <div class='coaster-bar' ng-controller='RateDrag'>
+                    <span class='slide'><span class='ion-ios-arrow-left'></span>  Slide to Rate This Beer</span>
+                    <!-- <span class='slide'>     Tap the Circle to Rate This Beer</span> -->
+                    <div class='coaster blonde' id='{{oldRec[0]}}' ng-click='selectBeer({{oldRec[0]}})'>
+                        <span class='coaster-beer-name'>{{oldRec[1]}}</span>
                     </div>
                 </div>
             </div>
@@ -20,4 +21,4 @@
 
                     
 <!-- YOUR IMPLEMENTATION -->
-<button ng-click="selectBeer({{newRec[0]}})" class="button   button-block button-positive">{{newRec[1]}}</button>
+<!-- <button ng-click="selectBeer({{newRec[0]}})" class="button button-block button-positive">{{newRec[1]}}</button> -->
