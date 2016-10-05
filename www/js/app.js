@@ -11,7 +11,9 @@ var rootUrl = 'http://how-to-train-your-palate-api.herokuapp.com'
 const craftEd = angular.module('craftEd', ['ionic'])
 
 .run(function($ionicPlatform) {
+  $ionicPlatform.blah = "hello"
   $ionicPlatform.ready(function() {
+
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins.Keyboard) {
