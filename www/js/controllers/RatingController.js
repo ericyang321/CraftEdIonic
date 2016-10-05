@@ -36,13 +36,15 @@ craftEd.controller('RatingController', ['$scope', '$http', '$location', '$state'
       $scope.selection = [];
       $scope.toggleSelection = function toggleSelection(tag) {
         var idx = $scope.selection.indexOf(tag.id);
-
+        var flavorSelector = angular.element(document.querySelector('tag-select-box'));
         if (idx > -1) {
             $scope.selection.splice(idx, 1);
+            document.getElementById("tag-label-" + tag.id).className = " tag ng-binding"
           }
 
         else {
           $scope.selection.push(tag.id);
+          document.getElementById("tag-label-" + tag.id).className += " selected"
         }
       };
     });

@@ -96,7 +96,7 @@ const craftEd = angular.module('craftEd', ['ionic'])
   })
 
   .state('app.rating', {
-    url: '/rating',
+    url: '/rating/:beerId',
     views: {
       'menuContent': {
         templateUrl: 'templates/rating.html',
