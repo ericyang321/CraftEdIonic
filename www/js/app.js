@@ -73,7 +73,8 @@ var craftEd = angular.module('craftEd', ['ionic'])
 
   .state('info', {
     url: '/info',
-    templateUrl: 'templates/info.html'
+    templateUrl: 'templates/info.html',
+    controller: 'InfoController'
   })
 
   .state('profile', {
