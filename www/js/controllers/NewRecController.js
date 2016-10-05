@@ -28,7 +28,7 @@ craftEd.controller('NewRecController', ['$scope', '$http', '$location', '$state'
   };
 
   $scope.onDrag = function(id) {
-    $state.go('rating',{beerId: id})
+    $state.go('app.rating',{beerId: id})
   }
 
   $http.get(rootUrl + '/users/:user_id/beer_types/rec_new', tokens)
@@ -42,7 +42,15 @@ craftEd.controller('NewRecController', ['$scope', '$http', '$location', '$state'
     $state.go('app.rating',{beerId: newRecId})
   }
 
+  // $scope.onDrag = function(event){
+  //   console.log('dragged!');
+  //   var coaster = angular.element(document.querySelector('coaster'));
+  //     coaster = event.pageX;
+  // }
 }])
+
+// .directive('newratedrag', ['$scope', '$state', function($scope, $state){
+// }]);
 
   // $('.coaster').draggable({
   //   axis: 'x',
