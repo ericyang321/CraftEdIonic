@@ -10093,6 +10093,38 @@ input[type="color"] {
 .profile-scroll-content {
   background-color: #45969C; }
 
+.recs-title-container {
+  display: block;
+  text-align: left;
+  font-size: 1.1em;
+  background-color: white;
+  border: 1px solid white;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 250px;
+  line-height: 1.5;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.recs-title {
+  font-family: "Sanchez", serif;
+  font-size: 1.5em;
+  color: white;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.new-recs-scroll-content {
+  background-color: #EBE955; }
+
+.old-recs-scroll-content {
+  background-color: #62C2CC; }
+
 .coasters-container {
   display: -webkit-box;
   display: -moz-box;
@@ -10100,34 +10132,31 @@ input[type="color"] {
   display: -moz-flex;
   display: -webkit-flex;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin: 0 auto; }
 
 .coaster-bar {
-  margin-left: auto;
-  margin-bottom: 20px;
+  padding: 20px;
+  justify-content: center;
+  background-color: #5A9363;
+  margin: 0 auto;
   margin-top: 20px;
-  margin-right: 15%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  align-items: baseline;
-  flex-direction: row; }
+  margin-bottom: 20px;
+  -webkit-box-shadow: 2px 2px 0px #bf9000;
+  -moz-box-shadow: 2px 2px 0px #bf9000;
+  box-shadow: 2px 2px 0px #bf9000;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
 
 .slide {
   font-size: 0.8em;
-  color: gray;
+  color: white;
   align-items: baseline;
   -webkit-background-clip: text; }
 
 .coaster {
   position: relative;
-  margin-left: 20px;
   width: 100px;
   height: 100px;
   font-size: 1em;
@@ -10146,26 +10175,12 @@ input[type="color"] {
   font-size: 1.2em; }
 
 .coaster-beer-name {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: "Sanchez", serif;
+  font-weight: bold; }
 
 .coaster.blonde {
-  background-color: #ffd966;
-  color: #222222; }
-
-.coaster.light-brown {
-  background-color: #bf9000;
-  color: #ffffff; }
-
-.coaster.dark-brown {
-  background-color: #7f6000;
-  color: #ffffff; }
-
-.coaster.darker-brown {
-  background-color: #3E2723;
-  color: #ffffff; }
-
-.coaster.black {
-  background-color: #212121;
+  background-color: black;
   color: #ffffff; }
 
 .rating_confirm-title {
