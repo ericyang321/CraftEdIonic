@@ -6,10 +6,14 @@ $opensans: 'Open Sans', sans-serif;
 $blonde: #ffd966;
 $lightBrown: #bf9000;
 $darkBrown: #7f6000;
-$darkerBrown: #3E2723;
+$darkerBrown: #602914;
 $black: #212121;
 
 $turq: #4EEAD2;
+$pastel-red: #F76264;
+$yellow: #EBE955;
+$dullgray: #88B6B6;
+$green: #5A9363;
 
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
   @if $inset {
@@ -66,5 +70,4 @@ $turq: #4EEAD2;
 
 [nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar{
   background: white;
-  border-bottom: 1px solid #e8e8e8;
 }

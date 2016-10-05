@@ -1,8 +1,10 @@
-<ion-view view-title="Get Started(flavors)">
-  <ion-content>
+<ion-view view-title="Flavors">
+  <ion-content class='flavors-scroll-content'>
   <div class='title-coaster'><span class='flavors-title'>Pick Some Flavors!</span></div>
-    <div class='flavors-description'>
-      <p class='p-description'>To help us better find beer you love, choose the flavors you normally like in food.</p>
+    <div class='flavors-card'>
+      <div class='flavors-description'>
+        <p class='p-description'>To help us better find beer you love, choose the flavors you normally like.</p>
+      </div>
     </div>
 
     <form name="myForm" ng-controller="FlavorController">
@@ -22,7 +24,7 @@
 
 
       <div class='flavors-custom-container'>
-        <button ng-click="submitFlavors()" class="button button-block" type="submit">Submit</button>
+        <button ng-click="submitFlavors()" class="button button-block flavor-button" type="submit">Submit</button>
       </div>
     </form>
   </ion-content>

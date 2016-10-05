@@ -12,6 +12,7 @@
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 }
 
 @mixin flex-bar{
@@ -27,9 +28,41 @@
     display: flex;
     -webkit-flex-wrap: nowrap; 
     flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
     -webkit-align-items: baseline; 
     align-items: baseline;
     flex-direction: row;
+}
+
+.recs-title-container{
+    display: block;
+    text-align: left;
+    font-size: 1.1em;
+    background-color: white;
+    border: 1px solid white;
+    padding: 15px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-width: 280px;
+    line-height: 1.5;
+    @include border-radius(8px);
+}
+
+.recs-title{
+    font-family: $sanchez;
+    font-size: 1.5em;
+    color: white;
+    @include vertical-snap();
+}
+
+.new-recs-scroll-content{
+    background-color: $yellow;
+}
+
+.old-recs-scroll-content{
+    background-color: #62C2CC;
 }
 
 .coasters-container{
@@ -37,19 +70,27 @@
 }
 
 .coaster-bar{
-    @include flex-bar
+    padding: 20px;
+    justify-content: center;
+    background-color: $green;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include box-shadow(2px, 2px, 0px, $lightBrown);
+    @include border-radius(8px);
+    // @include flex-bar
 }
 
 .slide{
    font-size: 0.8em;
-   color: gray;
+   color: white;
    align-items: baseline;
     -webkit-background-clip: text;
 }
 
 .coaster{
     position: relative;
-    margin-left: 20px;
+    // margin-left: 10px;
     width: 100px;
     height: 100px;
     font-size: 1em;
@@ -70,29 +111,31 @@
 
 .coaster-beer-name{
     text-transform: uppercase;
+    font-family: $sanchez;
+    font-weight: bold;
 }
 
 .coaster.blonde{
-    background-color: $blonde;
-    @include background-adjust($blonde);
+    background-color: black;
+    @include background-adjust(black);
 }
 
-.coaster.light-brown{
-    background-color: $lightBrown;
-    @include background-adjust($lightBrown);
-}
+// .coaster.light-brown{
+//     background-color: $lightBrown;
+//     @include background-adjust($lightBrown);
+// }
 
-.coaster.dark-brown{
-    background-color: $darkBrown;
-    @include background-adjust($darkBrown);
-}
+// .coaster.dark-brown{
+//     background-color: $darkBrown;
+//     @include background-adjust($darkBrown);
+// }
 
-.coaster.darker-brown{
-    background-color: $darkerBrown;
-    @include background-adjust($darkerBrown);
-}
+// .coaster.darker-brown{
+//     background-color: $darkerBrown;
+//     @include background-adjust($darkerBrown);
+// }
 
-.coaster.black{
-    background-color: $black;
-    @include background-adjust($black);
-}
+// .coaster.black{
+//     background-color: $black;
+//     @include background-adjust($black);
+// }

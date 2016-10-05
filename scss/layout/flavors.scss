@@ -1,6 +1,7 @@
 .flavors-title{
     font-size: 1.3em;
     color: white;
+    line-height: 1.5;
     top: 20px;
     display: inline-block;
     font-family: $sanchez;
@@ -18,27 +19,32 @@
     display: none;
 }
 
+.p-description{
+    margin: 0;
+}
+
 .flavor-choose-button{
     display: inline-block;
-    color: #d9d9d9;
-    margin: 3%;
+    color: white;
+    margin: 10px;
     font-family: $sanchez;
-    border: 1px solid $blonde;
+    border: 1px solid white;
     padding: 20px;
-    min-width: 100px;
+    min-width: 110px;
     @include border-radius(8px);
 }
 
 .flavors-description{
-    padding: 10px;
+    padding: 2px;
     margin: 10px;
     text-align: center;
 }
 
 .selected{
-    color: black;
-    background-color: $blonde;
+    color: white;
+    background-color: black;
     font-weight: bold;
+    border: 1px solid black;
 }
 
 .button.flavors-custom{
@@ -49,4 +55,31 @@
 .flavors-custom-container{
     margin: 30px;
     text-align: right;
+}
+
+.flavors-scroll-content{
+    background-color: $pastel-red;
+}
+
+.flavors-card{
+    display: block;
+    background-color: white;
+    border: 1px solid white;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-width: 280px;
+    line-height: 1.4;
+    @include border-radius(8px);
+}
+
+.button.button-block.flavor-button{
+    min-width: 50%;
+    max-width: 60%;
+    background-color: $blonde;
+    margin: 0 auto;
+    font-family: $sanchez;
+    @include box-shadow(1px, 1px, 1px, #4c4c4c);
+    @include border-radius(8px);
 }

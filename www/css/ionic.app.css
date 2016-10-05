@@ -9611,8 +9611,10 @@ a.button {
   color: #222222; }
 
 [nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
-  background: white;
-  border-bottom: 1px solid #e8e8e8; }
+  background: white; }
+
+.rating-scroll-content {
+  background-color: teal; }
 
 .rating-title {
   font-family: "Sanchez", serif;
@@ -9630,7 +9632,7 @@ a.button {
 .rating-card {
   display: block;
   background-color: white;
-  border: 1px solid #e8e8e8;
+  border: 1px solid white;
   padding: 5%;
   margin: 0 auto;
   margin-top: 3%;
@@ -9645,14 +9647,14 @@ a.button {
 
 .beer-rating-card {
   background-color: white;
-  border: 1px solid #e8e8e8;
-  padding: 5%;
+  border: 1px solid white;
+  padding: 15px;
   margin: 0 auto;
   margin-top: 3%;
   margin-bottom: 3%;
   font-size: 1.1em;
   line-height: 1.5;
-  min-height: 200px;
+  min-height: 180px;
   text-align: center;
   max-width: 300px;
   -webkit-border-radius: 8px;
@@ -9683,23 +9685,28 @@ a.button {
 
 .rating-comment-box {
   display: block;
+  padding: 10px;
   margin: 0 auto;
   max-width: 200px;
   border: 1px solid #e8e8e8;
   background: transparent;
-  resize: none; }
+  resize: none;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
 
 .star-chart {
   display: block; }
 
 .tag {
   text-align: center;
+  font-family: "Sanchez", serif;
   display: inline-block;
-  padding: 5%;
-  margin: 2%;
+  padding: 15px;
+  margin: 10px;
   font-size: 0.8em;
-  color: #d6d6d6;
-  border: 1px solid #ffd966;
+  color: black;
+  border: 1px solid #222;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
@@ -9708,7 +9715,9 @@ a.button {
   display: none; }
 
 .selected {
-  color: #222222; }
+  color: #222222;
+  font-family: "Sanchez", serif;
+  font-weight: bold; }
 
 .beerRate:not(old) {
   display: inline-block;
@@ -9744,6 +9753,20 @@ a.button {
   opacity: 0;
   overflow: hidden; }
 
+.button.button-block.rating-submit-button {
+  min-width: 50%;
+  max-width: 60%;
+  color: white;
+  background-color: black;
+  margin: 0 auto;
+  font-family: "Sanchez", serif;
+  -webkit-box-shadow: 1px 1px 0px #222;
+  -moz-box-shadow: 1px 1px 0px #222;
+  box-shadow: 1px 1px 0px #222;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
 .title {
   color: #222222; }
 
@@ -9753,7 +9776,8 @@ a.button {
   font-size: 1.5em; }
 
 .bar-stable.menu-bar {
-  background: #ffd966; }
+  background: white;
+  border-bottom: 1px solid #e8e8e8; }
 
 .menu-item-content {
   font-family: "Sanchez", serif;
@@ -9775,13 +9799,13 @@ a.button {
   height: 10%;
   background-color: #ffd966;
   margin: 0 auto;
-  max-width: 200px;
+  max-width: 230px;
   margin-bottom: 15px;
   margin-top: 15px;
   font-family: "Sanchez", serif;
-  -webkit-box-shadow: 1px 1px 1px #e8e8e8;
-  -moz-box-shadow: 1px 1px 1px #e8e8e8;
-  box-shadow: 1px 1px 1px #e8e8e8;
+  -webkit-box-shadow: 1px 1px 0px #e8e8e8;
+  -moz-box-shadow: 1px 1px 0px #e8e8e8;
+  box-shadow: 1px 1px 0px #e8e8e8;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
@@ -9798,21 +9822,21 @@ a.button {
   text-align: left;
   font-weight: bold;
   font-color: #222;
-  line-height: 1.1;
+  line-height: 1.3;
   font-size: 1.2em;
   font-family: "Sanchez", serif; }
 
 .title-coaster {
   text-align: center;
-  margin: 1%;
+  margin: 10px;
   padding: 10px;
   background-color: black;
-  width: 100px;
+  width: 120px;
+  height: 120px;
   color: white;
-  height: 100px;
   margin: 0 auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 30px;
+  margin-bottom: 30px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%; }
@@ -9852,7 +9876,7 @@ a.button {
   margin: 0 auto;
   margin-top: 15px;
   margin-bottom: 15px;
-  max-width: 280px;
+  max-width: 300px;
   line-height: 1.5;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -9863,9 +9887,10 @@ a.button {
 
 .item {
   border: none;
-  margin: 4%; }
+  margin: 10px; }
 
 .item.item-input {
+  margin: 5px;
   border-bottom: 1px solid #e8e8e8; }
 
 .button.button-block {
@@ -9874,13 +9899,61 @@ a.button {
   background-color: #ffd966;
   margin: 0 auto;
   font-family: "Sanchez", serif;
+  -webkit-box-shadow: 1px 1px 1px #e8e8e8;
+  -moz-box-shadow: 1px 1px 1px #e8e8e8;
+  box-shadow: 1px 1px 1px #e8e8e8;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
 
+.login-scroll-content {
+  background-color: #5D4037; }
+
+.custom-button {
+  background-color: white;
+  margin: 5px; }
+
+.input-label.login-input {
+  color: black;
+  font-family: "Sanchez", serif;
+  font-size: 1em; }
+
+.login-card {
+  display: block;
+  background-color: white;
+  border: 1px solid white;
+  padding: 5px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 300px;
+  line-height: 1.1;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  font-family: "Sanchez", serif;
+  font-size: 1em; }
+
 .flavors-title {
   font-size: 1.3em;
   color: white;
+  line-height: 1.5;
   top: 20px;
   display: inline-block;
   font-family: "Sanchez", serif;
@@ -9899,27 +9972,31 @@ a.button {
 .checkboxes {
   display: none; }
 
+.p-description {
+  margin: 0; }
+
 .flavor-choose-button {
   display: inline-block;
-  color: #d9d9d9;
-  margin: 3%;
+  color: white;
+  margin: 10px;
   font-family: "Sanchez", serif;
-  border: 1px solid #ffd966;
+  border: 1px solid white;
   padding: 20px;
-  min-width: 100px;
+  min-width: 110px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
 
 .flavors-description {
-  padding: 10px;
+  padding: 2px;
   margin: 10px;
   text-align: center; }
 
 .selected {
-  color: black;
-  background-color: #ffd966;
-  font-weight: bold; }
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  border: 1px solid black; }
 
 .button.flavors-custom {
   background-color: white;
@@ -9929,29 +10006,64 @@ a.button {
   margin: 30px;
   text-align: right; }
 
+.flavors-scroll-content {
+  background-color: #F76264; }
+
+.flavors-card {
+  display: block;
+  background-color: white;
+  border: 1px solid white;
+  padding: 5px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 280px;
+  line-height: 1.4;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.button.button-block.flavor-button {
+  min-width: 50%;
+  max-width: 60%;
+  background-color: #ffd966;
+  margin: 0 auto;
+  font-family: "Sanchez", serif;
+  -webkit-box-shadow: 1px 1px 1px #4c4c4c;
+  -moz-box-shadow: 1px 1px 1px #4c4c4c;
+  box-shadow: 1px 1px 1px #4c4c4c;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
 .flavor-wheel {
-  margin: 5%; }
+  margin: 15px;
+  text-align: center; }
 
 .flavor-wheel-legend {
-  margin: 5%; }
+  margin: 15px;
+  text-align: center; }
 
 .button.recommendation-button {
   display: block;
   margin: 0 auto;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  padding: 3%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: "Sanchez", serif;
+  padding: 10px;
+  padding: 10px;
+  font-weight: bold;
+  background-color: black;
+  border: 1px solid black;
+  max-width: 280px;
+  color: white;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #ffd966;
-  border: 1px solid #ffd966;
-  box-shadow: 0.5px 1px 0.5px rgba(0, 0, 0, 0.3);
-  max-width: 300px; }
+  border-radius: 8px; }
 
 .recommendation-button-container {
-  border-bottom: 1px solid #e8e8e8; }
+  margin-top: 15px;
+  margin-bottom: 15px; }
 
 .profile-title {
   font-family: "Sanchez", serif;
@@ -9968,19 +10080,74 @@ a.button {
 .seem-to-preference-container {
   display: block;
   background-color: white;
-  border: 1px solid #e8e8e8;
-  padding: 5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  border: 1px solid white;
+  padding: 20px;
   margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
   max-width: 300px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
 
+.click-container {
+  display: block;
+  background-color: white;
+  border: 1px solid white;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 300px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.click-title {
+  font-family: "Sanchez", serif;
+  color: black;
+  font-size: 1.5em;
+  margin-bottom: 20px; }
+
 .seem-to-preference-title {
   font-family: "Sanchez", serif;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  margin-bottom: 20px; }
+
+.profile-scroll-content {
+  background-color: #EBE955; }
+
+.recs-title-container {
+  display: block;
+  text-align: left;
+  font-size: 1.1em;
+  background-color: white;
+  border: 1px solid white;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 280px;
+  line-height: 1.5;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.recs-title {
+  font-family: "Sanchez", serif;
+  font-size: 1.5em;
+  color: white;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.new-recs-scroll-content {
+  background-color: #EBE955; }
+
+.old-recs-scroll-content {
+  background-color: #62C2CC; }
 
 .coasters-container {
   display: -webkit-box;
@@ -9989,34 +10156,31 @@ a.button {
   display: -moz-flex;
   display: -webkit-flex;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin: 0 auto; }
 
 .coaster-bar {
-  margin-left: auto;
-  margin-bottom: 20px;
+  padding: 20px;
+  justify-content: center;
+  background-color: #5A9363;
+  margin: 0 auto;
   margin-top: 20px;
-  margin-right: 15%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  align-items: baseline;
-  flex-direction: row; }
+  margin-bottom: 20px;
+  -webkit-box-shadow: 2px 2px 0px #bf9000;
+  -moz-box-shadow: 2px 2px 0px #bf9000;
+  box-shadow: 2px 2px 0px #bf9000;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
 
 .slide {
   font-size: 0.8em;
-  color: gray;
+  color: white;
   align-items: baseline;
   -webkit-background-clip: text; }
 
 .coaster {
   position: relative;
-  margin-left: 20px;
   width: 100px;
   height: 100px;
   font-size: 1em;
@@ -10035,26 +10199,12 @@ a.button {
   font-size: 1.2em; }
 
 .coaster-beer-name {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: "Sanchez", serif;
+  font-weight: bold; }
 
 .coaster.blonde {
-  background-color: #ffd966;
-  color: #222222; }
-
-.coaster.light-brown {
-  background-color: #bf9000;
-  color: #ffffff; }
-
-.coaster.dark-brown {
-  background-color: #7f6000;
-  color: #ffffff; }
-
-.coaster.darker-brown {
-  background-color: #3E2723;
-  color: #ffffff; }
-
-.coaster.black {
-  background-color: #212121;
+  background-color: black;
   color: #ffffff; }
 
 .rating_confirm-title {
