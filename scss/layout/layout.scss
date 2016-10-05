@@ -11,6 +11,7 @@ $black: #212121;
 
 $turq: #4EEAD2;
 $pastel-red: #F76264;
+$yellow: #EBE955;
 
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
   @if $inset {
@@ -67,5 +68,4 @@ $pastel-red: #F76264;
 
 [nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar{
   background: white;
-  border-bottom: 1px solid #e8e8e8;
 }

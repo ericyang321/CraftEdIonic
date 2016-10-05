@@ -1,21 +1,23 @@
 <ion-view view-title="Profile">
-  <ion-content>
+  <ion-content class='profile-scroll-content'>
+    <div class="title-coaster"><span class='profile-title'>Your Beer Profile</span></div>
 
-    <div class="title-coaster"><span class='profile-title'>CraftEd</span></div>
-    <div>
-    <div class='flavor-wheel-legend'>Flavor wheel Legend goes here</div>
-    <div class='flavor-wheel'>FLAVOR WHEEL</div>
+    <div class='seem-to-preference-container'>
+      <div class='recommendation-button-container'>
+       <a href="#/app/old_likes" class="button recommendation-button">Tried and True</a>
+       <a href="#/app/new_recs" class="button recommendation-button">Wild Card</a>
+      </div>
+    </div>
+    <div class='seem-to-preference-container'>
+      <div class='flavor-wheel-legend'>Flavor wheel Legend goes here</div>
+      <div class='flavor-wheel'>FLAVOR WHEEL</div>
     </div>
     <div class='seem-to-preference-container'>
      <!--  <p class='seem-to-preference-body'>Just ignore this card for now, not MVP</p> -->
-      <h1 class='seem-to-preference-title'>You Seem to Like:</h1>
+      <h1 class='seem-to-preference-title'>Preferences:</h1>
       <p class='seem-to-preference-body'>Porters, Dark Ales</p>
-      <h1 class='seem-to-preference-title'>You Seem to Dislike:</h1>
+      <h1 class='seem-to-preference-title'>Dislikes:</h1>
       <p class='seem-to-preference-body'>IPA</p>
-    </div>
-    <div class='recommendation-button-container'>
-     <a href="#/app/new_recs" class="button recommendation-button">Wild Card</a>
-     <a href="#/app/old_likes" class="button recommendation-button">Recommended</a>
     </div>
   </ion-content>
 </ion-view>

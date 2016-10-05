@@ -30,7 +30,7 @@
     font-family: $sanchez;
     border: 1px solid white;
     padding: 20px;
-    min-width: 100px;
+    min-width: 110px;
     @include border-radius(8px);
 }
 
@@ -69,7 +69,7 @@
     margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 15px;
-    max-width: 250px;
+    max-width: 280px;
     line-height: 1.4;
     @include border-radius(8px);
 }

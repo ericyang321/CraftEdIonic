@@ -1,27 +1,30 @@
 .flavor-wheel{
-    margin: 5%;
+    margin: 15px;
+    text-align: center;
 }
 
 .flavor-wheel-legend{
-    margin: 5%;
+    margin: 15px;
+    text-align: center;
 }
 
 .button.recommendation-button{
     display: block;
     margin: 0 auto;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 3%;
-    @include border-radius(8px);
     padding: 10px;
     background-color: $blonde;
     border: 1px solid $blonde;
-    box-shadow: 0.5px 1px 0.5px rgba(0, 0, 0, 0.3);
-    max-width: 300px;
+    max-width: 280px;
+    @include box-shadow(1px, 1px, 1px, #d6d6d6);
+    @include border-radius(8px);
 }
 
 .recommendation-button-container{
-    border-bottom: 1px solid #e8e8e8;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .profile-title{
@@ -36,11 +39,11 @@
 .seem-to-preference-container{
     display: block;
     background-color: white;
-    border: 1px solid #e8e8e8;
-    padding: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    border: 1px solid white;
+    padding: 20px;
     margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
     max-width: 300px;
     @include border-radius(8px);
 }
@@ -48,4 +51,8 @@
 .seem-to-preference-title{
     font-family: $sanchez;
     font-size: 1.5em;
+}
+
+.profile-scroll-content{
+    background-color: #88B6B6
 }

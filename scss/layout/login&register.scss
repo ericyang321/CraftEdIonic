@@ -5,6 +5,7 @@
 
 .item.item-input{
     margin: 5px;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 .button.button-block{
@@ -40,7 +41,7 @@
     margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 15px;
-    max-width: 280px;
+    max-width: 300px;
     line-height: 1.1;
     @include border-radius(8px);
 }
