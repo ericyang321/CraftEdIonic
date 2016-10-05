@@ -10025,14 +10025,14 @@ input[type="color"] {
   margin: 0 auto;
   margin-top: 15px;
   margin-bottom: 15px;
-  padding: 3%;
+  font-family: "Sanchez", serif;
   padding: 10px;
-  background-color: #ffd966;
-  border: 1px solid #ffd966;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #F76264;
+  border: 1px solid #F76264;
   max-width: 280px;
-  -webkit-box-shadow: 1px 1px 1px #d6d6d6;
-  -moz-box-shadow: 1px 1px 1px #d6d6d6;
-  box-shadow: 1px 1px 1px #d6d6d6;
+  color: white;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
@@ -10066,9 +10066,29 @@ input[type="color"] {
   -moz-border-radius: 8px;
   border-radius: 8px; }
 
+.click-container {
+  display: block;
+  background-color: #EBE955;
+  border: 1px solid #EBE955;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 300px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.click-title {
+  font-family: "Sanchez", serif;
+  color: black;
+  font-size: 1.5em;
+  margin-bottom: 20px; }
+
 .seem-to-preference-title {
   font-family: "Sanchez", serif;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  margin-bottom: 20px; }
 
 .profile-scroll-content {
   background-color: #45969C; }

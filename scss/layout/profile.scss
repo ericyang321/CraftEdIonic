@@ -13,12 +13,15 @@
     margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 15px;
-    padding: 3%;
+    font-family: $sanchez;
     padding: 10px;
-    background-color: $blonde;
-    border: 1px solid $blonde;
+    padding: 10px;
+    font-weight: bold;
+    background-color: $pastel-red;
+    border: 1px solid $pastel-red;
     max-width: 280px;
-    @include box-shadow(1px, 1px, 1px, #d6d6d6);
+    color: white;
+    // @include box-shadow(1px, 1px, 1px, #d6d6d6);
     @include border-radius(8px);
 }
 
@@ -48,9 +51,30 @@
     @include border-radius(8px);
 }
 
+.click-container{
+    display: block;
+    background-color: $yellow;
+    border: 1px solid $yellow;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-width: 300px;
+    @include border-radius(8px);
+}
+
+.click-title{
+    font-family: $sanchez;
+    color: black;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+
 .seem-to-preference-title{
     font-family: $sanchez;
     font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 .profile-scroll-content{
