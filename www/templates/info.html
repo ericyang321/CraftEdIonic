@@ -1,22 +1,20 @@
 <ion-view view-title="RatingConfirm">
   <ion-content>
     <div class='confirm-title-holder'>
-        <h1 class="rating_confirm-title">Thank You for Your Feedback!</h1>
-        <p class='rating_confirm-content'>We'll Adjust Your Beer Tastes Accordingly.</p>
+        <h1 class="rating_confirm-title">Thanks for your feedback!</h1>
     </div>
     <!-- <button menu-toggle="left" class="button  button-icon icon ion-navicon"></button> -->
-    <div class='rating-card'>
-        <div>Stars Placement Once I Figure That Out AND If We Want To Do It</div>
-    </div>
 
     <div class='submit-container'>
         <a href="#/profile" class="button custom-submit">Back to my profile</a>
     </div>
 
    <div class='rating-card beer-detailed-description'>
-        <h1 class='beer-detailed-title'>More about IPAs</h1>
-        <p>Info on reviewed Beer Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt felis nec erat egestas condimentum in eu nisi. Nullam aliquam odio a tristique facilisis. Fusce a laoreet mi. Nulla ut quam placerat tortor mattis suscipit. Pellentesque sit amet pretium lacus. Fusce ultricies id sapien non lobortis. Ut ultrices nisi quis magna blandit, non semper augue efficitur. Phasellus in pellentesque urna. Nam aliquam a tortor sed suscipit. Vestibulum efficitur, sapien vel dapibus pulvinar, dolor leo tristique massa, sed fringilla metus arcu eu elit. Proin auctor lacinia ligula, ut feugiat nisi ullamcorper sed. Donec accumsan venenatis dui at luctus. Nunc maximus neque diam, vel tristique risus tempor sed.</p>
+   <div ng-controller="InfoController">
+      <div ng-repeat="info in allInfos">
+        <h1 class='beer-detailed-title'>{{info.name}}</h1>
+        <p>{{info.description}}</p>
     </div>
-
+    </div>
   </ion-content>
 </ion-view>

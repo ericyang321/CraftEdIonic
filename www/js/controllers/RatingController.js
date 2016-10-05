@@ -35,19 +35,20 @@ craftEd.controller('RatingController', ['$scope', '$http', '$location', '$state'
 
       $scope.selection = [];
       $scope.toggleSelection = function toggleSelection(tag) {
-        var idx = $scope.selection.indexOf(tag[0]);
+        var idx = $scope.selection.indexOf(tag.id);
 
         if (idx > -1) {
             $scope.selection.splice(idx, 1);
           }
 
         else {
-          $scope.selection.push(tag[0]);
+          $scope.selection.push(tag.id);
         }
       };
     });
 
   $scope.submitRating = function(){
+    $scope.selection.push($scope.allTags.mainType.id);
     data = {tagIds: $scope.selection, comment: $scope.comment, rating: $scope.rating};
     $http.post(rootUrl +'/users/:user_id/tried_beer_ratings', data, tokens)
       .then(function(response){
