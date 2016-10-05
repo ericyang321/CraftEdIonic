@@ -51,10 +51,14 @@
 }
 
 .home-card{
+    display: block;
     background-color: white;
     border: 1px solid #e8e8e8;
     padding: 1%;
-    margin: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin: 0 auto;
+    max-width: 300px;
     line-height: 1.5;
     @include border-radius(8px);
 }
