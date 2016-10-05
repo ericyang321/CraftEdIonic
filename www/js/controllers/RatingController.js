@@ -53,7 +53,7 @@ craftEd.controller('RatingController', ['$scope', '$http', '$location', '$state'
     $http.post(rootUrl +'/users/:user_id/tried_beer_ratings', data, tokens)
       .then(function(response){
     })
-    $location.path('/info');
+    $location.path('/app/info');
   }
 
 }]);

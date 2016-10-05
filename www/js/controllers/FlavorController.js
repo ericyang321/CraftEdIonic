@@ -61,7 +61,7 @@ craftEd.controller('FlavorController', ['$scope', '$http', '$location', '$ionicP
       $http.post(rootUrl +'/users/:user_id/flavors', data, tokens)
         .then(function(response){
       })
-      $location.path('/rating');
+      $location.path('/app/rating');
   }
 
 }]);

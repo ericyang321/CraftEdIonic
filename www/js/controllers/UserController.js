@@ -39,7 +39,7 @@ craftEd.controller('UserController', ['$scope', '$http', '$location', '$ionicPop
         .then(function(response){
           storeSession(response);
         })
-      $location.path('/flavors');
+      $location.path('/app/flavors');
     }
     else {
       $scope.password = "";
@@ -54,7 +54,7 @@ craftEd.controller('UserController', ['$scope', '$http', '$location', '$ionicPop
       .then(function(response){
         storeSession(response);
       })
-    $location.path('/profile');
+    $location.path('/app/profile');
   }
 
   $scope.logout = function() {
