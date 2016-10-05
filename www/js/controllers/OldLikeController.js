@@ -47,39 +47,37 @@ craftEd.controller('OldLikeController', ['$scope', '$http', '$location', '$state
 
 
 
-.controller('RateDrag', ['$scope', '$http', '$location', '$state', function($scope, $http, $location, $state){
+// .controller('RateDrag', ['$scope', '$http', '$location', '$state', function($scope, $http, $location, $state){
 
-  $('.coaster').draggable({
-    axis: 'x',
-    containment: 'parent',
-    start: function(event, ui){
-      $(this).siblings('.slide').fadeOut('fast')
-    },
-    drag: function(event, ui, $scope) {
-       var dragBeer = function(newRecId){
-        $state.go('rating',{beerId: newRecId})
-      }
-      // THIS IS THE PART WHERE IT REROUTES PAST -153 PIXEL MOVEMENT
-      if (ui.position.left < -153) {
-        var draggedId = $(this).attr('id');
-        console.log(draggedId);
-        dragBeer(draggedId);
-        $(this).animate({
-          left: 0
-        })
-        $(this).siblings('.slide').fadeIn('fast')
-      }
-    },
-    stop: function(event, ui) {
+//   $('.coaster').draggable({
+//     axis: 'x',
+//     containment: 'parent',
+//     start: function(event, ui){
+//       $(this).siblings('.slide').fadeOut('fast')
+//     },
+//     drag: function(event, ui, $scope) {
+//        var dragBeer = function(newRecId){
+//         $state.go('rating',{beerId: newRecId})
+//       }
+//       // THIS IS THE PART WHERE IT REROUTES PAST -153 PIXEL MOVEMENT
+//       if (ui.position.left < -153) {
+//         var draggedId = $(this).attr('id');
+//         console.log(draggedId);
+//         dragBeer(draggedId);
+//         $(this).animate({
+//           left: 0
+//         })
+//         $(this).siblings('.slide').fadeIn('fast')
+//       }
+//     },
+//     stop: function(event, ui) {
 
-      if (ui.position.left > -153) {
-        $(this).animate({
-          left: 0
-        })
-        $(this).siblings('.slide').fadeIn('fast')
-      }
-    }
-
-    
-  })
-}]);
+//       if (ui.position.left > -153) {
+//         $(this).animate({
+//           left: 0
+//         })
+//         $(this).siblings('.slide').fadeIn('fast')
+//       }
+//     }
+//   })
+// }]);
