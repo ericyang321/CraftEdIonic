@@ -7,23 +7,27 @@
     display: block;
     width: 50%;
     height: 10%;
-    border: 1px solid white;
     background-color: $blonde;
     margin: 0 auto;
     max-width: 200px;
-    margin-bottom: 4%;
-    margin-top: 4%;
+    margin-bottom: 15px;
+    margin-top: 15px;
     font-family: $sanchez;
+    @include box-shadow(1px, 1px, 1px, #e8e8e8);
     @include border-radius(8px);
+    @include active;
 }
 
 .home-description{
-    padding: 5%;
+    padding: 15px;
 }
 
 .home-description.larger{
-    text-align: center;
-    font-size: 1.5em;
+    text-align: left;
+    font-weight: bold;
+    font-color: #222;
+    line-height: 1.1;
+    font-size: 1.2em;
     font-family: $sanchez;
 }
 
@@ -32,20 +36,34 @@
     margin: 1%;
     padding: 10px;
     background-color: black;
-    width: 120px;
+    width: 100px;
     color: white;
-    height: 120px;
+    height: 100px;
     margin: 0 auto;
     margin-top: 5%;
     margin-bottom: 5%;
     @include border-radius(50%);
 }
 
+.home-title-coaster{
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    background-color: black;
+    width: 190px;
+    height: 190px;
+    color: white;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @include border-radius(50%);
+}
+
 .home-title{
     font-family: $sanchez;
-    font-size: 1.5em;
+    font-size: 2em;
+    line-height: 1.5;
     color: white;
-    line-height: 120px;
     text-align: center;
     @include vertical-snap();
 }
@@ -53,12 +71,16 @@
 .home-card{
     display: block;
     background-color: white;
-    border: 1px solid #e8e8e8;
-    padding: 1%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    border: 1px solid white;
+    padding: 5px;
     margin: 0 auto;
-    max-width: 300px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-width: 280px;
     line-height: 1.5;
     @include border-radius(8px);
+}
+
+.home-scroll-content{
+    background-color: $turq;
 }

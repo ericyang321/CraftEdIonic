@@ -28,7 +28,8 @@ craftEd.controller('NewRecController', ['$scope', '$http', '$location', '$state'
   };
 
   $scope.onDrag = function(id) {
-    $state.go('app.rating',{beerId: id})
+    $state.go('app.rating',{beerId: id});
+    
   }
 
   $http.get(rootUrl + '/users/:user_id/beer_types/rec_new', tokens)
