@@ -7,8 +7,8 @@
         <div ng-repeat="oldRec in allRecs">
             <div class='coasters-container'>
                 <div class='coaster-bar'>
-                    <span class='slide'><span class='ion-ios-arrow-left'></span>  Slide to Rate This Beer</span>
-                    <div class='coaster blonde' id='{{oldRec[0]}}' ng-click='selectBeer({{oldRec[0]}})'>
+                    <span class='slide'><span class='ion-ios-arrow-left'></span>     Slide to Rate This Beer</span>
+                    <div on-drag-left='onDrag({{newRec[0]}})' class='coaster blonde' id='{{oldRec[0]}}' ng-click='selectBeer({{oldRec[0]}})'>
                         <span class='coaster-beer-name'>{{oldRec[1]}}</span>
                     </div>
                 </div>
