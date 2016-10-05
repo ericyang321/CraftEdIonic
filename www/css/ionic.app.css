@@ -9611,12 +9611,160 @@ a.button {
   font-size: 1.5em;
   color: #222222; }
 
-.bar.bar-stable {
+[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+  background: white;
+  border-bottom: 1px solid #e8e8e8; }
+
+.rating-title {
+  font-family: "Sanchez", serif;
+  font-size: 1.5em;
+  color: white;
+  line-height: 1.1;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.rating-card {
+  display: block;
   background-color: white;
-  border: none; }
+  border: 1px solid #e8e8e8;
+  padding: 5%;
+  margin: 0 auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 300px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.beer-rating-card {
+  background-color: white;
+  border: 1px solid #e8e8e8;
+  padding: 5%;
+  margin: 0 auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-size: 1.1em;
+  line-height: 1.5;
+  min-height: 200px;
+  text-align: center;
+  max-width: 300px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.starRating {
+  margin-left: 20%; }
+
+.submit-container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5%; }
+
+.custom-submit {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ffd966;
+  background-color: #ffd966;
+  max-width: 323px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.rating-text {
+  text-align: center; }
+
+.rating-comment-box {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  border: 1px solid #e8e8e8;
+  background: transparent;
+  resize: none; }
+
+.star-chart {
+  display: block; }
+
+.tag {
+  text-align: center;
+  display: inline-block;
+  padding: 5%;
+  margin: 2%;
+  font-size: 0.8em;
+  color: #d6d6d6;
+  border: 1px solid #ffd966;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.tag-select-box {
+  display: none; }
+
+.selected {
+  color: #222222; }
+
+.beerRate:not(old) {
+  display: inline-block;
+  height: 1.5em;
+  vertical-align: bottom;
+  padding-top: 30px; }
+
+.beerRate:not(old) > label {
+  display: block;
+  float: right;
+  width: 5em;
+  position: relative;
+  background: url("unclicked.png");
+  background-size: contain; }
+
+.beerRate:not(old) > label:before {
+  content: '';
+  display: block;
+  width: 5em;
+  height: 5em;
+  background: url("clicked.png");
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 0.2s linear; }
+
+.beerRate:not(old) > label:hover:before,
+.beerRate:not(old) > label:hover ~ label:before,
+.beerRate:not(:hover) > :checked ~ label:before {
+  opacity: 1; }
+
+.beerRate:not(old) > input {
+  margin-right: -50px;
+  opacity: 0;
+  overflow: hidden; }
 
 .title {
   color: #222222; }
+
+.title.burger-menu-title {
+  font-family: "Sanchez", serif;
+  font-weight: bold;
+  font-size: 1.5em; }
+
+.bar-stable.menu-bar {
+  background: #ffd966; }
+
+.menu-item-content {
+  font-family: "Sanchez", serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  text-align: left;
+  padding-left: 20px; }
+
+.logout-button {
+  color: #D84315; }
 
 .home-button-container {
   display: block;
@@ -9651,8 +9799,8 @@ a.button {
   padding: 10px;
   background-color: black;
   width: 120px;
+  color: white;
   height: 120px;
-  color: #222222;
   margin: 0 auto;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -9881,124 +10029,6 @@ a.button {
 .coaster.black {
   background-color: #212121;
   color: #ffffff; }
-
-.rating-title {
-  font-family: "Sanchez", serif;
-  font-size: 1.5em;
-  color: white;
-  line-height: 1.1;
-  text-align: center;
-  display: inline-block;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
-
-.rating-card {
-  display: block;
-  background-color: white;
-  border: 1px solid #e8e8e8;
-  padding: 5%;
-  margin: 0 auto;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  font-size: 1.1em;
-  line-height: 1.5;
-  text-align: center;
-  max-width: 300px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px; }
-
-.beer-rating-card {
-  background-color: white;
-  border: 1px solid #e8e8e8;
-  padding: 5%;
-  margin: 0 auto;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  font-size: 1.1em;
-  line-height: 1.5;
-  min-height: 200px;
-  text-align: center;
-  max-width: 300px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px; }
-
-.starRating {
-  margin-left: 20%; }
-
-.submit-container {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  padding: 5%; }
-
-.custom-submit {
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #ffd966;
-  background-color: #ffd966;
-  max-width: 323px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px; }
-
-.rating-text {
-  text-align: center; }
-
-.star-chart {
-  display: block; }
-
-.tag {
-  text-align: center;
-  display: inline-block;
-  padding: 3%;
-  font-size: 0.8em;
-  color: #d6d6d6;
-  border: 1px solid #ffd966;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px; }
-
-.selected {
-  color: #222222; }
-
-.beerRate:not(old) {
-  display: inline-block;
-  height: 1.5em;
-  vertical-align: bottom;
-  padding-top: 30px; }
-
-.beerRate:not(old) > label {
-  display: block;
-  float: right;
-  width: 5em;
-  position: relative;
-  background: url("unclicked.png");
-  background-size: contain; }
-
-.beerRate:not(old) > label:before {
-  content: '';
-  display: block;
-  width: 5em;
-  height: 5em;
-  background: url("clicked.png");
-  background-size: contain;
-  opacity: 0;
-  transition: opacity 0.2s linear; }
-
-.beerRate:not(old) > label:hover:before,
-.beerRate:not(old) > label:hover ~ label:before,
-.beerRate:not(:hover) > :checked ~ label:before {
-  opacity: 1; }
-
-.beerRate:not(old) > input {
-  margin-right: -50px;
-  opacity: 0;
-  overflow: hidden; }
 
 .rating_confirm-title {
   display: inline-block;
