@@ -56,7 +56,7 @@ $black: #212121;
     color: #222222;
 }
 
-.bar.bar-stable{
-    background-color: white;
-    border: none;
+[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar{
+  background: white;
+  border-bottom: 1px solid #e8e8e8;
 }

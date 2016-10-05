@@ -35,7 +35,7 @@ craftEd.controller('OldLikeController', ['$scope', '$http', '$location', '$state
     });
 
   $scope.selectBeer = function(newRecId){
-    $state.go('rating',{beerId: newRecId})
+    $state.go('app.rating',{beerId: newRecId})
   };
 }])
 
@@ -57,7 +57,7 @@ craftEd.controller('OldLikeController', ['$scope', '$http', '$location', '$state
     },
     drag: function(event, ui, $scope) {
        var dragBeer = function(newRecId){
-        $state.go('rating',{beerId: newRecId})
+        $state.go('app.rating',{beerId: newRecId})
       }
       // THIS IS THE PART WHERE IT REROUTES PAST -153 PIXEL MOVEMENT
       if (ui.position.left < -153) {

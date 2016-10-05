@@ -8,7 +8,7 @@
 // var rootUrl = 'http://how-to-train-your-palate-api.herokuapp.com'
 var rootUrl = 'http://localhost:3000'
 
-var craftEd = angular.module('craftEd', ['ionic'])
+const craftEd = angular.module('craftEd', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -29,60 +29,101 @@ var craftEd = angular.module('craftEd', ['ionic'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-  .state('home', {
+  .state('app',{
+    url: '/app',
+    abstract: true,
+    templateUrl: 'templates/menu.html',
+  })
+
+  .state('app.home', {
     url: '/home',
-    templateUrl: 'templates/home.html'
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/home.html'
+      }
+    }
   })
 
-  .state('register', {
+  .state('app.register', {
     url: '/register',
-    templateUrl: 'templates/register.html',
+    views: {
+      'menuContent': {
+      templateUrl: 'templates/register.html',
+      }
+    },
     controller: 'UserController'
   })
 
 
-  .state('login', {
+  .state('app.login', {
     url: '/login',
-    templateUrl: 'templates/login.html',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/login.html',
+        }
+      },
     controller: 'UserController'
   })
 
-  .state('flavors', {
+  .state('app.flavors', {
     url: '/flavors',
-    templateUrl: 'templates/flavors.html',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/flavors.html',
+      }
+    },
     controller: 'FlavorController'
   })
 
-  .state('new_recs', {
+  .state('app.new_recs', {
     url: '/new_recs',
-    templateUrl: 'templates/new_recs.html',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/new_recs.html',
+      }
+    },
     controller: 'NewRecController'
   })
 
-  .state('old_likes', {
+  .state('app.old_likes', {
     url: '/old_likes',
-    templateUrl: 'templates/old_likes.html',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/old_likes.html',
+      }
+    },
     controller: 'OldLikeController'
   })
 
-  .state('rating', {
+  .state('app.rating', {
     url: '/rating/:beerId',
-    templateUrl: 'templates/rating.html',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/rating.html',
+      }
+    },
     controller: 'RatingController'
   })
 
-  .state('info', {
+  .state('app.info', {
     url: '/info',
-    templateUrl: 'templates/info.html',
-    controller: 'InfoController'
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/info.html'
+      }
+    },
   })
 
-  .state('profile', {
+  .state('app.profile', {
     url: '/profile',
-    templateUrl: 'templates/profile.html'
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/profile.html'
+      }
+    },
   });
   // if none of the above states are matched, use this as the fall back
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/app/home');
 
 });
 
