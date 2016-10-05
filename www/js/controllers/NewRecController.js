@@ -27,6 +27,10 @@ craftEd.controller('NewRecController', ['$scope', '$http', '$location', '$state'
     }
   };
 
+  $scope.onDrag = function(id) {
+    $state.go('rating',{beerId: id})
+  }
+
   $http.get(rootUrl + '/users/:user_id/beer_types/rec_new', tokens)
     .then(function(response){
       $scope.allRecs= response.data
@@ -45,3 +49,33 @@ craftEd.controller('NewRecController', ['$scope', '$http', '$location', '$state'
 
 .directive('newratedrag', ['$scope', '$state', function($scope, $state){
 }]);
+
+  // $('.coaster').draggable({
+  //   axis: 'x',
+  //   containment: 'parent',
+  //   start: function(event, ui){
+  //     $(this).siblings('.slide').fadeOut('fast')
+  //   },
+  //   drag: function(event, ui, $scope) {
+  //      var dragBeer = function(newRecId){
+  //       $state.go('app.rating',{beerId: newRecId})
+  //     }
+  //     // THIS IS THE PART WHERE IT REROUTES PAST -153 PIXEL MOVEMENT
+  //     if (ui.position.left < -153) {
+  //       var draggedId = $(this).attr('id');
+  //       console.log(draggedId);
+  //       dragBeer(draggedId);
+  //     }
+  //   },
+  //   stop: function(event, ui) {
+
+  //     if (ui.position.left > -153) {
+  //       $(this).animate({
+  //         left: 0
+  //       })
+  //       $(this).siblings('.slide').fadeIn('fast')
+  //     }
+  //   }
+//   })
+// }]);
+>>>>>>> c8a7a5fed7ec438369b03425b660ddd598372f10

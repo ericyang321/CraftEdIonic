@@ -27,6 +27,10 @@ craftEd.controller('OldLikeController', ['$scope', '$http', '$location', '$state
     }
   };
 
+  $scope.onDrag = function(id) {
+    $state.go('rating',{beerId: id})
+  }
+
   $http.get(rootUrl + '/users/:user_id/beer_types/rec_like', tokens)
     .then(function(response){
       $scope.allRecs = response.data
@@ -42,3 +46,4 @@ craftEd.controller('OldLikeController', ['$scope', '$http', '$location', '$state
 .directive('oldRateDrag', ['$scope', '$state', function($scope, $state){
   
 }]);
+

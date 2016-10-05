@@ -7,8 +7,10 @@
         <div ng-repeat="newRec in allRecs">
             <div class='coasters-container'>
                 <div class='coaster-bar'>
+
                     <span class='slide'><span class='ion-ios-arrow-left'></span>     Slide to Rate This Beer</span>
                     <div on-drag-left='onDrag()' class='coaster blonde' id='{{newRec[0]}}' ng-click='selectBeer({{newRec[0]}})'>
+
                         <span class='coaster-beer-name'>{{newRec[1]}}</span>
                     </div>
                 </div>
@@ -17,6 +19,6 @@
     </div>
   </ion-content>
 </ion-view>
-                    
+
 <!-- YOUR IMPLEMENTATION -->
 <!-- <button ng-click="selectBeer({{newRec[0]}})" class="button button-block button-positive">{{newRec[1]}}</button> -->
