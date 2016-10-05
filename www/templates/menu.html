@@ -1,10 +1,15 @@
+<div ng-app="craftEd" ng-controller="MenuController">
 <ion-side-menus enable-menu-with-back-views="true">
   <ion-side-menu-content>
     <ion-nav-bar class="bar-stable">
+<!--       <ion-nav-back-button class="button-clear">
+        <i class="ion-arrow-right-c"></i> Back
+      </ion-nav-back-button> -->
 
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
       </ion-nav-buttons>
+
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
@@ -15,19 +20,20 @@
     </ion-header-bar>
     <ion-content class='menu-body'>
       <ion-list>
-        <ion-item menu-close href="#/app/login">
+        <ion-item menu-close href="#/app/login" ng-show="showLogin">
           <div class='menu-item-content'>Login</div>
         </ion-item>
-        <ion-item menu-close href="#/app/register">
+        <ion-item menu-close href="#/app/register" ng-show="showRegister">
           <div class='menu-item-content'>Register</div>
         </ion-item>
-        <ion-item menu-close href="#/app/profile">
+        <ion-item menu-close href="#/app/profile" ng-show="showProfile">
           <div class='menu-item-content'>Profile</div>
         </ion-item>
-        <ion-item menu-close href='#/app/home'>
+        <ion-item menu-close href='#/app/home' ng-show="showLogout">
           <div class='logout-button' ng-click="logout()" ng-controller='UserController'><div class='menu-item-content'>Logout</div></div>
         </ion-item>
       </ion-list>
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>
+</div>
