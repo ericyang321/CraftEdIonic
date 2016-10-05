@@ -9753,7 +9753,8 @@ a.button {
   font-size: 1.5em; }
 
 .bar-stable.menu-bar {
-  background: #ffd966; }
+  background: white;
+  border-bottom: 1px solid #e8e8e8; }
 
 .menu-item-content {
   font-family: "Sanchez", serif;
@@ -9779,9 +9780,9 @@ a.button {
   margin-bottom: 15px;
   margin-top: 15px;
   font-family: "Sanchez", serif;
-  -webkit-box-shadow: 1px 1px 1px #e8e8e8;
-  -moz-box-shadow: 1px 1px 1px #e8e8e8;
-  box-shadow: 1px 1px 1px #e8e8e8;
+  -webkit-box-shadow: 1px 1px 0px #e8e8e8;
+  -moz-box-shadow: 1px 1px 0px #e8e8e8;
+  box-shadow: 1px 1px 0px #e8e8e8;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
@@ -9798,21 +9799,21 @@ a.button {
   text-align: left;
   font-weight: bold;
   font-color: #222;
-  line-height: 1.1;
+  line-height: 1.3;
   font-size: 1.2em;
   font-family: "Sanchez", serif; }
 
 .title-coaster {
   text-align: center;
-  margin: 1%;
+  margin: 10px;
   padding: 10px;
   background-color: black;
-  width: 100px;
+  width: 120px;
+  height: 120px;
   color: white;
-  height: 100px;
   margin: 0 auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 30px;
+  margin-bottom: 30px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%; }
@@ -9863,10 +9864,10 @@ a.button {
 
 .item {
   border: none;
-  margin: 4%; }
+  margin: 10px; }
 
 .item.item-input {
-  border-bottom: 1px solid #e8e8e8; }
+  margin: 5px; }
 
 .button.button-block {
   min-width: 50%;
@@ -9874,13 +9875,61 @@ a.button {
   background-color: #ffd966;
   margin: 0 auto;
   font-family: "Sanchez", serif;
+  -webkit-box-shadow: 1px 1px 1px #e8e8e8;
+  -moz-box-shadow: 1px 1px 1px #e8e8e8;
+  box-shadow: 1px 1px 1px #e8e8e8;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
 
+.login-scroll-content {
+  background-color: #5D4037; }
+
+.custom-button {
+  background-color: white;
+  margin: 5px; }
+
+.input-label.login-input {
+  color: black;
+  font-family: "Sanchez", serif;
+  font-size: 1em; }
+
+.login-card {
+  display: block;
+  background-color: white;
+  border: 1px solid white;
+  padding: 5px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 280px;
+  line-height: 1.1;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  font-family: "Sanchez", serif;
+  font-size: 1em; }
+
 .flavors-title {
   font-size: 1.3em;
   color: white;
+  line-height: 1.5;
   top: 20px;
   display: inline-block;
   font-family: "Sanchez", serif;
@@ -9899,12 +9948,15 @@ a.button {
 .checkboxes {
   display: none; }
 
+.p-description {
+  margin: 0; }
+
 .flavor-choose-button {
   display: inline-block;
-  color: #d9d9d9;
-  margin: 3%;
+  color: white;
+  margin: 10px;
   font-family: "Sanchez", serif;
-  border: 1px solid #ffd966;
+  border: 1px solid white;
   padding: 20px;
   min-width: 100px;
   -webkit-border-radius: 8px;
@@ -9912,14 +9964,15 @@ a.button {
   border-radius: 8px; }
 
 .flavors-description {
-  padding: 10px;
+  padding: 2px;
   margin: 10px;
   text-align: center; }
 
 .selected {
-  color: black;
-  background-color: #ffd966;
-  font-weight: bold; }
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  border: 1px solid black; }
 
 .button.flavors-custom {
   background-color: white;
@@ -9928,6 +9981,36 @@ a.button {
 .flavors-custom-container {
   margin: 30px;
   text-align: right; }
+
+.flavors-scroll-content {
+  background-color: #F76264; }
+
+.flavors-card {
+  display: block;
+  background-color: white;
+  border: 1px solid white;
+  padding: 5px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 250px;
+  line-height: 1.4;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.button.button-block.flavor-button {
+  min-width: 50%;
+  max-width: 60%;
+  background-color: #ffd966;
+  margin: 0 auto;
+  font-family: "Sanchez", serif;
+  -webkit-box-shadow: 1px 1px 1px #4c4c4c;
+  -moz-box-shadow: 1px 1px 1px #4c4c4c;
+  box-shadow: 1px 1px 1px #4c4c4c;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
 
 .flavor-wheel {
   margin: 5%; }

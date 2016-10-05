@@ -10,6 +10,7 @@ $darkerBrown: #3E2723;
 $black: #212121;
 
 $turq: #4EEAD2;
+$pastel-red: #F76264;
 
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
   @if $inset {
