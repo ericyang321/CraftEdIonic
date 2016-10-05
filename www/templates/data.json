@@ -1,0 +1,202 @@
+{
+  "name": "Beer",
+  "rating": 0,
+ "children": [
+    {
+      "name": "Browns", "size": 5,
+      "rating": 0,
+      "children": [
+        {
+          "name": "American", "size": 5,
+          "rating": 0
+        },
+        {
+          "name": "English", "size": 5
+        }
+      ]
+    },
+    {
+     "name": "Porters","size": 5,
+     "rating": 0,
+     "children": [
+        {
+          "name": "Baltic", "size": 5
+        },
+        {
+          "name": "Robust", "size": 5
+        }
+      ]
+    },
+    {
+     "name": "Stouts","size": 5,
+     "rating": 0,
+     "children": [
+        {
+          "name": "Dry", "size": 5
+        },
+        {
+          "name": "Sweet", "size": 5
+        },
+        {
+          "name": "Oatmeal", "size": 5
+        },
+         {
+          "name": "Foreign", "size": 5
+        },
+         {
+          "name": "Imperial", "size": 5
+        }
+      ]
+    },
+    {
+     "name": "Pale Ales","size": 5,
+     "rating": 0,
+     "children": [
+        {
+          "name": "American", "size": 5
+        },
+        {
+          "name": "American Double", "size": 5
+        },
+        {
+          "name": "India", "size": 5
+        },
+         {
+          "name": "Bitter", "size": 5
+        }
+      ]
+    },
+    {
+     "name": "Belgians","size": 5,
+     "rating": 0,
+     "children": [
+        {
+          "name": "Abbey", "size": 5
+        },
+        {
+          "name": "Tripel", "size": 5
+        },
+        {
+          "name": "Dubbel", "size": 5
+        },
+         {
+          "name": "Quadrupel", "size": 5
+        },
+        {
+          "name": "Saison", "size": 5
+        },
+        {
+          "name": "Golden Blonde", "size": 5
+        },
+        {
+          "name": "Lambic", "size": 5
+        },
+        {
+          "name": "Flanders", "size": 5
+        }
+      ]
+    },
+     {
+     "name": "Sours","size": 5,
+     "rating": 0,
+     "children": [
+        {
+          "name": "Lambic", "size": 5
+        },
+        {
+          "name": "Flanders", "size": 5
+        },
+        {
+          "name": "Wild", "size": 5
+        },
+        {
+          "name": "Berlinweisse", "size": 5
+        }
+      ]
+    },
+    {
+     "name": "Wheats","size": 5,
+     "rating": 0,
+     "children": [
+        {
+          "name": "Hefeweizen", "size": 5
+        },
+        {
+          "name": "Dunkelweizen", "size": 5
+        },
+        {
+          "name": "Witbier", "size": 5
+        }
+      ]
+    },
+     {
+     "name": "Bocks","size": 5,
+     "rating": 0,
+     "children": [
+        {
+          "name": "Eisbock", "size": 5
+        },
+        {
+          "name": "Maibock/Helles", "size": 5
+        },
+        {
+          "name": "Doppelbock", "size": 5
+        }
+      ]
+    },
+    {
+     "name": "Pale Lagers","size": 5,
+     "rating": 0,
+     "children": [
+        {
+          "name": "American", "size": 5
+        },
+        {
+          "name": "India", "size": 5
+        },
+        {
+          "name": "Pilsner", "size": 5
+        },
+         {
+          "name": "Munich Dunkel", "size": 5
+        },
+        {
+          "name": "Munich Helles", "size": 5
+        },
+        {
+          "name": "Schwarzbier", "size": 5
+        }
+      ]
+    },
+    {
+     "name": "Dark Lagers","size": 5,
+     "rating": 0,
+     "children": [
+        {
+          "name": "Munich Helles", "size": 5
+        },
+        {
+          "name": "Schwarzbier", "size": 5
+        },
+        {
+          "name": "Marzen", "size": 5
+        }
+      ]
+    },
+    {
+     "name": "Ambers","size": 5,
+     "rating": 0,
+     "children": [
+        {
+          "name": "Vienna", "size": 5
+        },
+        {
+          "name": "Rauchbier", "size": 5
+        },
+        {
+          "name": "Amber", "size": 5
+        }
+      ]
+    }
+   ]
+}
