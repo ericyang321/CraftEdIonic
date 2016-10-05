@@ -1,10 +1,12 @@
-craftEd.controller('RatingController', ['$scope', '$http', '$location', function($scope, $http, $location) {
+craftEd.controller('RatingController', ['$scope', '$http', '$location', '$state',function($scope, $http, $location, $state) {
 
   var config = {
     headers: {
       'content-type': 'application/json'
     }
-  };
+  }
+
+  var beerId = $state.params.beerId;
 
   var tokens = {
     headers: {
@@ -18,6 +20,7 @@ craftEd.controller('RatingController', ['$scope', '$http', '$location', function
 
   var tokensConfig = {
     headers: {
+      'content-type': 'application/json',
       "access-token": window.sessionStorage.token,
       "token-type": "Bearer",
       "client": window.sessionStorage.client,
@@ -26,22 +29,31 @@ craftEd.controller('RatingController', ['$scope', '$http', '$location', function
     }
   };
 
-  $http.get(rootUrl + '/users/:id/beer_types/:id/tried_beer_ratings/new', tokens)
+  $http.get(rootUrl + '/users/:user_id/beer_types/' + beerId + '/tried_beer_ratings/new', tokensConfig)
     .then(function(response){
       $scope.allTags= response.data
 
       $scope.selection = [];
       $scope.toggleSelection = function toggleSelection(tag) {
-        var idx = $scope.selection.indexOf(tag[0]);
+        var idx = $scope.selection.indexOf(tag.id);
 
         if (idx > -1) {
             $scope.selection.splice(idx, 1);
           }
 
         else {
-          $scope.selection.push(tag[0]);
+          $scope.selection.push(tag.id);
         }
       };
     });
+
+  $scope.submitRating = function(){
+    $scope.selection.push($scope.allTags.mainType.id);
+    data = {tagIds: $scope.selection, comment: $scope.comment, rating: $scope.rating};
+    $http.post(rootUrl +'/users/:user_id/tried_beer_ratings', data, tokens)
+      .then(function(response){
+    })
+    $location.path('/info');
+  }
 
 }]);

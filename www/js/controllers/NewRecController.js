@@ -1,4 +1,4 @@
-craftEd.controller('NewRecController', ['$scope', '$http', '$location', function($scope, $http, $location){
+craftEd.controller('NewRecController', ['$scope', '$http', '$location', '$state',function($scope, $http, $location, $state){
 
   var config = {
     headers: {
@@ -27,16 +27,48 @@ craftEd.controller('NewRecController', ['$scope', '$http', '$location', function
     }
   };
 
-  $http.get(rootUrl + '/users/:id/beer_types/rec_new', tokens)
+  $http.get(rootUrl + '/users/:user_id/beer_types/rec_new', tokens)
     .then(function(response){
       $scope.allRecs= response.data
       $scope.rootUrl= rootUrl
       $scope.title = "Beers I've never tried"
-      $scope.myController = "NewRecController"
     });
 
   $scope.selectBeer = function(newRecId){
-    $http.get(rootUrl +'/users/:user_id/beer_types/' + newRecId + '/tried_beer_ratings/new', tokens)
-    $location.path('/rating');
+    $state.go('rating',{beerId: newRecId})
   }
+}])
+
+
+.controller('RateDrag', ['$scope', '$http', '$location', '$state', function($scope, $http, $location, $state){
+
+  $('.coaster').draggable({
+    axis: 'x',
+    containment: 'parent',
+    start: function(event, ui){
+      $(this).siblings('.slide').fadeOut('fast')
+    },
+    drag: function(event, ui, $scope) {
+       var dragBeer = function(newRecId){
+        $state.go('rating',{beerId: newRecId})
+      }
+      // THIS IS THE PART WHERE IT REROUTES PAST -153 PIXEL MOVEMENT
+      if (ui.position.left < -153) {
+        var draggedId = $(this).attr('id');
+        console.log(draggedId);
+        dragBeer(draggedId);
+      }
+    },
+    stop: function(event, ui) {
+
+      if (ui.position.left > -153) {
+        $(this).animate({
+          left: 0
+        })
+        $(this).siblings('.slide').fadeIn('fast')
+      }
+    }
+
+    
+  })
 }]);

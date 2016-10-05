@@ -23,12 +23,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "../www/lib/ionic/scss/ionic";
 // Custom
 @import '../scss/layout/layout';
+@import '../scss/layout/rating';
 @import '../scss/menu/menu';
 @import '../scss/layout/home';
 @import '../scss/layout/login&register';
 @import '../scss/layout/flavors';
 @import '../scss/layout/profile';
 @import '../scss/layout/listSliders';
-@import '../scss/layout/rating';
 @import '../scss/layout/rating_confirm';
 
