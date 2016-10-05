@@ -37,6 +37,10 @@ craftEd.controller('NewRecController', ['$scope', '$http', '$location', '$state'
   $scope.selectBeer = function(newRecId){
     $state.go('app.rating',{beerId: newRecId})
   }
+
+  $scope.onDrag = function(){
+    console.log('dragged!');
+  }
 }])
 
 .directive('newratedrag', ['$scope', '$state', function($scope, $state){
