@@ -1,6 +1,6 @@
 {
   "name": "HowToTrainYourPalate",
-  "app_id": "f3e7d912",
+  "app_id": "1810de60",
   "gulpStartupTasks": [
     "sass",
     "watch"
