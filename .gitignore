@@ -8,3 +8,4 @@ plugins/
 *.css.map
 .io-config.json
 ionic.config.json
+
