@@ -9613,6 +9613,9 @@ a.button {
 [nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
   background: white; }
 
+.rating-scroll-content {
+  background-color: teal; }
+
 .rating-title {
   font-family: "Sanchez", serif;
   font-size: 1.5em;
@@ -9629,7 +9632,7 @@ a.button {
 .rating-card {
   display: block;
   background-color: white;
-  border: 1px solid #e8e8e8;
+  border: 1px solid white;
   padding: 5%;
   margin: 0 auto;
   margin-top: 3%;
@@ -9644,14 +9647,14 @@ a.button {
 
 .beer-rating-card {
   background-color: white;
-  border: 1px solid #e8e8e8;
-  padding: 5%;
+  border: 1px solid white;
+  padding: 15px;
   margin: 0 auto;
   margin-top: 3%;
   margin-bottom: 3%;
   font-size: 1.1em;
   line-height: 1.5;
-  min-height: 200px;
+  min-height: 180px;
   text-align: center;
   max-width: 300px;
   -webkit-border-radius: 8px;
@@ -9682,23 +9685,28 @@ a.button {
 
 .rating-comment-box {
   display: block;
+  padding: 10px;
   margin: 0 auto;
   max-width: 200px;
   border: 1px solid #e8e8e8;
   background: transparent;
-  resize: none; }
+  resize: none;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
 
 .star-chart {
   display: block; }
 
 .tag {
   text-align: center;
+  font-family: "Sanchez", serif;
   display: inline-block;
-  padding: 5%;
-  margin: 2%;
+  padding: 15px;
+  margin: 10px;
   font-size: 0.8em;
-  color: #d6d6d6;
-  border: 1px solid #ffd966;
+  color: black;
+  border: 1px solid #222;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
@@ -9707,7 +9715,9 @@ a.button {
   display: none; }
 
 .selected {
-  color: #222222; }
+  color: #222222;
+  font-family: "Sanchez", serif;
+  font-weight: bold; }
 
 .beerRate:not(old) {
   display: inline-block;
@@ -9742,6 +9752,20 @@ a.button {
   margin-right: -50px;
   opacity: 0;
   overflow: hidden; }
+
+.button.button-block.rating-submit-button {
+  min-width: 50%;
+  max-width: 60%;
+  color: white;
+  background-color: black;
+  margin: 0 auto;
+  font-family: "Sanchez", serif;
+  -webkit-box-shadow: 1px 1px 0px #222;
+  -moz-box-shadow: 1px 1px 0px #222;
+  box-shadow: 1px 1px 0px #222;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
 
 .title {
   color: #222222; }
@@ -10029,8 +10053,8 @@ input[type="color"] {
   padding: 10px;
   padding: 10px;
   font-weight: bold;
-  background-color: #F76264;
-  border: 1px solid #F76264;
+  background-color: black;
+  border: 1px solid black;
   max-width: 280px;
   color: white;
   -webkit-border-radius: 8px;
@@ -10068,8 +10092,8 @@ input[type="color"] {
 
 .click-container {
   display: block;
-  background-color: #EBE955;
-  border: 1px solid #EBE955;
+  background-color: white;
+  border: 1px solid white;
   padding: 20px;
   margin: 0 auto;
   margin-top: 15px;
@@ -10091,7 +10115,7 @@ input[type="color"] {
   margin-bottom: 20px; }
 
 .profile-scroll-content {
-  background-color: #45969C; }
+  background-color: #EBE955; }
 
 .recs-title-container {
   display: block;
@@ -10103,7 +10127,7 @@ input[type="color"] {
   margin: 0 auto;
   margin-top: 15px;
   margin-bottom: 15px;
-  max-width: 250px;
+  max-width: 280px;
   line-height: 1.5;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;

@@ -1,11 +1,11 @@
 <ion-view view-title="Rating">
-  <ion-content>
+  <ion-content class='rating-scroll-content'>
     <!-- <button menu-toggle="left" class="button button-icon icon ion-navicon"></button> -->
     <form name="ratingForm" ng-controller="RatingController">
       <div class="title-coaster"><div class='rating-title'>{{allTags.mainType.name}}</div></div>
 
       <div class='beer-rating-card'>
-        <p class='rating-text'>Rate this beer!</p>
+        <p class='rating-text'>What did you think?</p>
 
         <div class='star-chart'>
           <span class="beerRate">
@@ -23,7 +23,7 @@
       </div>
 
     <div class='rating-card'>
-      <p class='rating-text'>Tell us more about what beer this is (optional)</p>
+      <p class='rating-text'>Tell us more about this beer!</p>
       <div class='tag-container'>
       <label id="tag-label-{{tag.id}}" ng-repeat="tag in allTags.associatedTypes" class='tag'>
         <input
@@ -39,12 +39,12 @@
   </div>
 
       <div class='rating-card'>
-        <p class='rating-text'>Add a comment (optional)</p>
+        <p class='rating-text'>Add a comment</p>
         <textarea class='rating-comment-box' ng-model="comment" cols="40" rows="2"></textarea>
       </div>
 
     <div class='submit-container'>
-      <button ng-click="submitRating()" class="button button-block button-positive" type="submit">Submit</button>
+      <button ng-click="submitRating()" class="button button-block rating-submit-button" type="submit">Submit</button>
     </div>
     </form>
     </div>
