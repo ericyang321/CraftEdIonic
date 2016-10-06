@@ -5,15 +5,14 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 
-// var rootUrl = 'http://how-to-train-your-palate-api.herokuapp.com'
-var rootUrl = 'http://localhost:3000'
+var rootUrl = 'http://how-to-train-your-palate-api.herokuapp.com'
+// var rootUrl = 'http://localhost:3000'
 
 const craftEd = angular.module('craftEd', ['ionic'])
 
 
 
 .run(function($ionicPlatform) {
-  $ionicPlatform.blah = "hello"
   $ionicPlatform.ready(function() {
 
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -138,6 +137,7 @@ const craftEd = angular.module('craftEd', ['ionic'])
         templateUrl: 'templates/profile.html'
       }
     },
+    controller: 'WheelController'
   });
   // if none of the above states are matched, use this as the fall back
   $urlRouterProvider.otherwise('/app/home');

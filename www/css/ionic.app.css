@@ -9865,8 +9865,8 @@ a.button {
 
 .home-title {
   font-family: "Sanchez", serif;
-  font-size: 2em;
-  line-height: 1.5;
+  font-size: 1.9em;
+  line-height: 1.3;
   color: white;
   text-align: center;
   position: relative;
@@ -9915,7 +9915,7 @@ a.button {
   border-radius: 8px; }
 
 .login-scroll-content {
-  background-color: white; }
+  background-color: #AD1457; }
 
 .custom-button {
   background-color: white;
@@ -10045,7 +10045,6 @@ input[type="color"] {
   border-radius: 8px; }
 
 .flavor-wheel {
-  margin: 15px;
   text-align: center; }
 
 .flavor-wheel-legend {
@@ -10123,6 +10122,21 @@ input[type="color"] {
 
 .profile-scroll-content {
   background-color: #FFD54F; }
+
+path {
+  stroke: #d6d6d6;
+  fill-rule: evenodd; }
+
+text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  font-weight: bold; }
+
+.beer-type-2 {
+  opacity: 0; }
+
+.beer-type-0 {
+  fill: #000000; }
 
 .recs-title-container {
   display: block;
