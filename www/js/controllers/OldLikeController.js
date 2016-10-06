@@ -31,6 +31,10 @@ craftEd.controller('OldLikeController', ['$scope', '$http', '$location', '$state
     $state.go('app.rating',{beerId: id})
   }
 
+  $scope.$on('$ionicView.beforeEnter', function (event, viewData) {
+    viewData.enableBack = true;
+  });
+
   $http.get(rootUrl + '/users/:user_id/beer_types/rec_like', tokens)
     .then(function(response){
       $scope.allRecs = response.data
@@ -41,9 +45,4 @@ craftEd.controller('OldLikeController', ['$scope', '$http', '$location', '$state
   $scope.selectBeer = function(newRecId){
     $state.go('app.rating',{beerId: newRecId})
   };
-}])
-
-.directive('oldRateDrag', ['$scope', '$state', function($scope, $state){
-  
 }]);
-
