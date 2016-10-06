@@ -3,6 +3,7 @@
     font-family: $sanchez;
     font-size: 2em;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .confirm-title-holder{
@@ -18,7 +19,7 @@
 }
 
 .rating_confirm-content{
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 .beer-detailed-title{
@@ -26,4 +27,22 @@
     font-size: 2em;
     text-align: left;
     line-height: 1.5;
+}
+
+.info-scroll-content{
+    background-color: $pastel-red;
+}
+
+.info-coaster{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    color: white;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @include border-radius(50%);
 }

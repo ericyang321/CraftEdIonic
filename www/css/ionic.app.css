@@ -9619,8 +9619,9 @@ a.button {
 .rating-title {
   font-family: "Sanchez", serif;
   font-size: 1.5em;
+  text-transform: uppercase;
   color: white;
-  line-height: 1.1;
+  line-height: 1.5;
   text-align: center;
   display: inline-block;
   position: relative;
@@ -9675,7 +9676,7 @@ a.button {
   margin: 0 auto;
   border: 1px solid #ffd966;
   background-color: #ffd966;
-  max-width: 323px;
+  max-width: 300px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
@@ -9702,14 +9703,18 @@ a.button {
   text-align: center;
   font-family: "Sanchez", serif;
   display: inline-block;
-  padding: 15px;
-  margin: 10px;
+  padding: 10px;
+  margin: 5px;
   font-size: 0.8em;
   color: black;
   border: 1px solid #222;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
+
+.tag-container {
+  text-align: left;
+  padding-left: 10px; }
 
 .tag-select-box {
   display: none; }
@@ -9797,7 +9802,8 @@ a.button {
   display: block;
   width: 50%;
   height: 10%;
-  background-color: #ffd966;
+  background-color: black;
+  color: white;
   margin: 0 auto;
   max-width: 230px;
   margin-bottom: 15px;
@@ -9831,8 +9837,8 @@ a.button {
   margin: 10px;
   padding: 10px;
   background-color: black;
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   color: white;
   margin: 0 auto;
   margin-top: 30px;
@@ -9843,6 +9849,7 @@ a.button {
 
 .home-title-coaster {
   text-align: center;
+  padding: 10px;
   margin: 5px;
   padding: 10px;
   background-color: black;
@@ -9896,7 +9903,8 @@ a.button {
 .button.button-block {
   min-width: 50%;
   max-width: 60%;
-  background-color: #ffd966;
+  background-color: black;
+  color: white;
   margin: 0 auto;
   font-family: "Sanchez", serif;
   -webkit-box-shadow: 1px 1px 1px #e8e8e8;
@@ -9907,7 +9915,7 @@ a.button {
   border-radius: 8px; }
 
 .login-scroll-content {
-  background-color: #5D4037; }
+  background-color: white; }
 
 .custom-button {
   background-color: white;
@@ -10115,7 +10123,7 @@ input[type="color"] {
   margin-bottom: 20px; }
 
 .profile-scroll-content {
-  background-color: #EBE955; }
+  background-color: #FFC107; }
 
 .recs-title-container {
   display: block;
@@ -10150,18 +10158,12 @@ input[type="color"] {
   background-color: #62C2CC; }
 
 .coasters-container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto; }
+  display: block;
+  margin: 0 auto;
+  width: 140px; }
 
 .coaster-bar {
   padding: 20px;
-  justify-content: center;
   background-color: #5A9363;
   margin: 0 auto;
   margin-top: 20px;
@@ -10184,7 +10186,6 @@ input[type="color"] {
   width: 100px;
   height: 100px;
   font-size: 1em;
-  line-height: 100px;
   text-align: center;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -10199,9 +10200,15 @@ input[type="color"] {
   font-size: 1.2em; }
 
 .coaster-beer-name {
+  display: inline-block;
   text-transform: uppercase;
   font-family: "Sanchez", serif;
-  font-weight: bold; }
+  font-weight: bold;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
 .coaster.blonde {
   background-color: black;
@@ -10211,7 +10218,8 @@ input[type="color"] {
   display: inline-block;
   font-family: "Sanchez", serif;
   font-size: 2em;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 30px; }
 
 .confirm-title-holder {
   display: block;
@@ -10224,12 +10232,30 @@ input[type="color"] {
   text-align: left; }
 
 .rating_confirm-content {
-  font-size: 1.3em; }
+  font-size: 1em; }
 
 .beer-detailed-title {
   font-family: "Sanchez", serif;
   font-size: 2em;
   text-align: left;
   line-height: 1.5; }
+
+.info-scroll-content {
+  background-color: #F76264; }
+
+.info-coaster {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: black;
+  width: 150px;
+  height: 150px;
+  color: white;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
 
 /*# sourceMappingURL=ionic.app.css.map */

@@ -66,12 +66,14 @@
 }
 
 .coasters-container{
-    @include flex-container;
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+    // @include flex-container;
 }
 
 .coaster-bar{
     padding: 20px;
-    justify-content: center;
     background-color: $green;
     margin: 0 auto;
     margin-top: 20px;
@@ -94,7 +96,6 @@
     width: 100px;
     height: 100px;
     font-size: 1em;
-    line-height: 100px;
     text-align: center;
     @include border-radius(50%);
 }
@@ -110,9 +111,11 @@
 }
 
 .coaster-beer-name{
+    display: inline-block;
     text-transform: uppercase;
     font-family: $sanchez;
     font-weight: bold;
+    @include vertical-snap();
 }
 
 .coaster.blonde{

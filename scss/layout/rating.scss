@@ -5,8 +5,9 @@
 .rating-title{
     font-family: $sanchez;
     font-size: 1.5em;
+    text-transform: uppercase;
     color: white;
-    line-height: 1.1;
+    line-height: 1.5;
     text-align: center;
     display: inline-block;
     @include vertical-snap();
@@ -58,7 +59,7 @@
     margin: 0 auto;
     border: 1px solid $blonde;
     background-color: $blonde;
-    max-width: 323px;
+    max-width: 300px;
     @include border-radius(8px);
 }
 
@@ -85,12 +86,17 @@
     text-align: center;
     font-family: $sanchez;
     display: inline-block;
-    padding: 15px;
-    margin: 10px;
+    padding: 10px;
+    margin: 5px;
     font-size: 0.8em;
     color: black;
     border: 1px solid #222;
     @include border-radius(8px);
+}
+
+.tag-container{
+  text-align: left;
+  padding-left: 10px;
 }
 
 .tag-select-box{
