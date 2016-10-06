@@ -1,5 +1,10 @@
 craftEd.controller('RatingController', ['$scope', '$http', '$location', '$state',function($scope, $http, $location, $state) {
 
+  // $scope.$on("$ionicView.enter", function(){
+  //   console.log("hi!")
+  //   $state.go($state.current, {reload: true, inherit: false});
+  // })
+
   var config = {
     headers: {
       'content-type': 'application/json'
@@ -49,13 +54,16 @@ craftEd.controller('RatingController', ['$scope', '$http', '$location', '$state'
       };
     });
 
+
+
   $scope.submitRating = function(){
     $scope.selection.push($scope.allTags.mainType.id);
     data = {tagIds: $scope.selection, comment: $scope.comment, rating: $scope.rating};
     $http.post(rootUrl +'/users/:user_id/tried_beer_ratings', data, tokens)
       .then(function(response){
+      $state.go('app.info');
+
     })
-    $location.path('/app/info');
   }
 
 }]);
