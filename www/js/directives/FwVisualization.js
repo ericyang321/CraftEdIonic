@@ -1,5 +1,5 @@
 var data = {
-  "name": "Beer",
+  "name": "",
   "rating": 0,
 
  "children": [
@@ -214,9 +214,9 @@ var data = {
    ]
 }
 
-var width = 400,
-    height = 300,
-    radius = Math.min(width, height)/1.5;
+var width = 500,
+    height = 400,
+    radius = Math.min(width, height)/2.2;
 
 var x = d3.scale.linear().range([0, 2 * Math.PI]);
 var y = d3.scale.linear().range([0, radius]);
@@ -283,7 +283,7 @@ var generateChart = function(scope, elem, attrs) {
               // get a selection of the associated text element
               var arcText = d3.select(this.parentNode).select("text");
               // fade in the text element and recalculate positions
-              arcText.transition().duration(750)
+              arcText.transition().duration(300)
                 .attr("opacity", 1)
                 .attr("transform", function() { return "rotate(" + computeTextRotation(e) + ")" })
                 .attr("x", function(d) { return y(d.y); });
@@ -291,9 +291,7 @@ var generateChart = function(scope, elem, attrs) {
         });
     };
 
-
   }
-
     d3.select(self.frameElement).style("height", height + "px");
 craftEd.directive('fwVisualization', function() {
   return {
