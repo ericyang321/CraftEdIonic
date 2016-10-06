@@ -136,6 +136,7 @@ const craftEd = angular.module('craftEd', ['ionic'])
         templateUrl: 'templates/profile.html'
       }
     },
+    controller: 'WheelController'
   });
   // if none of the above states are matched, use this as the fall back
   $urlRouterProvider.otherwise('/app/home');
