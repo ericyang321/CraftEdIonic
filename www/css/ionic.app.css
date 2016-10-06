@@ -10034,7 +10034,8 @@ input[type="color"] {
 .button.button-block.flavor-button {
   min-width: 50%;
   max-width: 60%;
-  background-color: #ffd966;
+  background-color: black;
+  color: white;
   margin: 0 auto;
   font-family: "Sanchez", serif;
   -webkit-box-shadow: 1px 1px 1px #4c4c4c;
