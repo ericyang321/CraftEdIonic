@@ -3,8 +3,40 @@
 }
 
 .flavor-wheel-legend{
-    margin: 15px;
     text-align: center;
+    display: block;
+    background-color: white;
+    border: 1px solid white;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-width: 300px;
+    @include border-radius(8px);
+}
+
+.legend-title{
+    font-size: 1.5em;
+    font-family: $sanchez;
+    line-height: 1.1;
+}
+
+.legend-body{
+    font-size: 1em;
+    font-family: $opensans;
+    line-height: 1.5;
+}
+
+.thumbs-icon{
+    font-size: 2em;
+}
+
+.up{
+    color: $green;
+}
+
+.down{
+    color: $pastel-red;
 }
 
 .button.recommendation-button{
@@ -86,18 +118,10 @@ path {
 
 text {
   font-family: $opensans;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: bold;
 }
 
 .beer-type-2{
   opacity: 0;
-}
-
-.beer-type-0{
-    fill: #000000;
-}
-
-.svg-wheel{
-
 }
