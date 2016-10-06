@@ -4,8 +4,12 @@
     <form name="ratingForm" ng-controller="RatingController">
       <div class="title-coaster"><div class='rating-title'>{{allTags.mainType.name}}</div></div>
 
+      <div class='rating-card beer-detailed-description'>
+      <p>Tell us more about your beer so we can refine your preferences.</p>
+      </div>
+
       <div class='beer-rating-card'>
-        <p class='rating-text'>What did you think?</p>
+        <p class='rating-text'>Yay, nay... call me maybe?</p>
 
         <div class='star-chart'>
           <span class="beerRate">
@@ -23,9 +27,7 @@
       </div>
 
     <div class='rating-card'>
-      <h1 class='rating-text'>Tags</h1>
-      <p class='rating-text'>Anything look familiar?<br>
-      Tell us more about your beer so we can refine your preferences.</p>
+      <p class='rating-text'>Anyone look familiar?</p>
       <div class='tag-container'>
       <label id="tag-label-{{tag.id}}" ng-repeat="tag in allTags.associatedTypes" class='tag'>
         <input
@@ -40,10 +42,10 @@
     </div>
   </div>
 
-      <div class='rating-card'>
+<!--       <div class='rating-card'>
         <p class='rating-text'>Add a comment</p>
         <textarea class='rating-comment-box' ng-model="comment" cols="40" rows="2"></textarea>
-      </div>
+      </div> -->
 
     <div class='submit-container'>
       <button ng-click="submitRating()" class="button button-block rating-submit-button" type="submit">Submit</button>
