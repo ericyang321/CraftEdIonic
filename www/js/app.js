@@ -30,6 +30,10 @@ const craftEd = angular.module('craftEd', ['ionic'])
 })
 
 .config(function($ionicConfigProvider) {
+  $ionicConfigProvider.views.swipeBackEnabled(false);
+})
+
+.config(function($ionicConfigProvider) {
   // remove back button text completely
   $ionicConfigProvider.backButton.previousTitleText(false).text(' ');
 })
