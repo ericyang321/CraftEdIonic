@@ -34,6 +34,7 @@ craftEd.controller('NewRecController', ['$scope', '$http', '$location', '$state'
   $http.get(rootUrl + '/users/:user_id/beer_types/rec_new', tokens)
     .then(function(response){
       $scope.allRecs= response.data
+      console.log($scope.allRecs)
       $scope.rootUrl= rootUrl
       $scope.title = "Beers I've never tried"
     });
