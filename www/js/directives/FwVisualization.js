@@ -262,7 +262,7 @@ var generateChart = function(scope, elem, attrs) {
         .attr("width", width)
         .attr("height", height + 100)
         .append("g")
-        .attr("transform", "translate(" + (width / 2+5) + "," + (height / 2+40) + ")");
+        .attr("transform", "translate(" + (width / 2+5) + "," + (height / 2) + ")");
 
 
 

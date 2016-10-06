@@ -1,7 +1,6 @@
 <ion-view view-title="CraftEd" hide-back-button="true">
   <ion-content class='profile-scroll-content'>
     <div class="title-coaster"><span class='profile-title'>PROFILE</span></div>
-
     <div class='click-container'>
       <div class='recommendation-button-container'>
       <h1 class='click-title'>Let's drink!</h1>
@@ -10,18 +9,19 @@
       </div>
     </div>
 
-      <div class='flavor-wheel-legend'>Legend:</div>
-      <div class='flavor-wheel-legend'>Red: you hate this or whatever</div>
-      <div class='flavor-wheel-legend'>Green: you love this or whatever</div>
       <div class='flavor-wheel'>
+        <div class='flavor-wheel-legend'>
+        <h1 class='legend-title'>Flavor Wheel</h1>
+        <p class='legend-body'>Based on your beer ratings, we've constructed a flavor wheel for you, showing your likes and dislikes.</p>
+        <p class='legend-body'><b>Click On the Wheel to Get Started.</b></p>
+          Red 
+          <label class="ion-thumbsdown thumbs-icon down"></label> 
+          | Green  <label class="ion-thumbsup thumbs-icon up"></label>
+        </div>
+
         <div fw-visualization class='svg-wheel'>
+
+        </div>
       </div>
-    <!-- <div class='seem-to-preference-container'>
-      <p class='seem-to-preference-body'>Just ignore this card for now, not MVP</p>
-      <h1 class='seem-to-preference-title'>Preferences:</h1>
-      <p class='seem-to-preference-body'>Porters, Dark Ales</p>
-      <h1 class='seem-to-preference-title'>Dislikes:</h1>
-      <p class='seem-to-preference-body'>IPA</p>
-    </div> -->
   </ion-content>
 </ion-view>
