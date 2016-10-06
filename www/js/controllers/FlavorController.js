@@ -60,7 +60,7 @@ craftEd.controller('FlavorController', ['$scope', '$http', '$location', '$ionicP
       data = {flavorid: $scope.selection};
       $http.post(rootUrl +'/users/:user_id/flavors', data, tokens)
         .then(function(response){
-          $state.go('app.profile');
+          $location.path('/app/profile');
       })
   }
 
