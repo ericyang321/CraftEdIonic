@@ -28,7 +28,7 @@ craftEd.controller('OldLikeController', ['$scope', '$http', '$location', '$state
   };
 
   $scope.onDrag = function(id) {
-    $state.go('app.rating',{beerId: id})
+    $state.go('app.rating',{beerId: id});
   }
 
   $scope.$on('$ionicView.beforeEnter', function (event, viewData) {
@@ -44,5 +44,5 @@ craftEd.controller('OldLikeController', ['$scope', '$http', '$location', '$state
 
   $scope.selectBeer = function(newRecId){
     $state.go('app.rating',{beerId: newRecId})
-  };
+  }
 }]);

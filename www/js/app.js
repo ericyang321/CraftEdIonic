@@ -5,8 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 
-var rootUrl = 'http://how-to-train-your-palate-api.herokuapp.com'
-// var rootUrl = 'http://localhost:3000'
+// var rootUrl = 'http://how-to-train-your-palate-api.herokuapp.com'
+var rootUrl = 'http://localhost:3000'
 
 const craftEd = angular.module('craftEd', ['ionic'])
 
@@ -46,6 +46,7 @@ const craftEd = angular.module('craftEd', ['ionic'])
 
   .state('app.home', {
     url: '/home',
+    cache: false,
     views: {
       'menuContent': {
         templateUrl: 'templates/home.html'
@@ -55,6 +56,7 @@ const craftEd = angular.module('craftEd', ['ionic'])
 
   .state('app.register', {
     url: '/register',
+    cache: false,
     views: {
       'menuContent': {
       templateUrl: 'templates/register.html',
@@ -66,6 +68,7 @@ const craftEd = angular.module('craftEd', ['ionic'])
 
   .state('app.login', {
     url: '/login',
+    cache: false,
     views: {
       'menuContent': {
         templateUrl: 'templates/login.html',
@@ -76,6 +79,7 @@ const craftEd = angular.module('craftEd', ['ionic'])
 
   .state('app.flavors', {
     url: '/flavors',
+    cache: false,
     views: {
       'menuContent': {
         templateUrl: 'templates/flavors.html',
@@ -86,6 +90,7 @@ const craftEd = angular.module('craftEd', ['ionic'])
 
   .state('app.new_recs', {
     url: '/new_recs',
+    cache: false,
     views: {
       'menuContent': {
         templateUrl: 'templates/new_recs.html',
@@ -96,6 +101,7 @@ const craftEd = angular.module('craftEd', ['ionic'])
 
   .state('app.old_likes', {
     url: '/old_likes',
+    cache: false,
     views: {
       'menuContent': {
         templateUrl: 'templates/old_likes.html',
@@ -106,6 +112,7 @@ const craftEd = angular.module('craftEd', ['ionic'])
 
   .state('app.rating', {
     url: '/rating/:beerId',
+    cache: false,
     views: {
       'menuContent': {
         templateUrl: 'templates/rating.html',
@@ -125,6 +132,7 @@ const craftEd = angular.module('craftEd', ['ionic'])
 
   .state('app.profile', {
     url: '/profile',
+    cache: false,
     views: {
       'menuContent': {
         templateUrl: 'templates/profile.html'
