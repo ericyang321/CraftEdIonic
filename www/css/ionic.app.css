@@ -9706,8 +9706,8 @@ a.button {
   padding: 10px;
   margin: 5px;
   font-size: 0.8em;
-  color: black;
-  border: 1px solid #222;
+  color: #d6d6d6;
+  border: 1px solid #d6d6d6;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
@@ -10060,9 +10060,8 @@ input[type="color"] {
   font-family: "Sanchez", serif;
   padding: 10px;
   padding: 10px;
-  font-weight: bold;
-  background-color: black;
-  border: 1px solid black;
+  background-color: #F76264;
+  border: 1px solid #F76264;
   max-width: 280px;
   color: white;
   -webkit-border-radius: 8px;
@@ -10123,7 +10122,7 @@ input[type="color"] {
   margin-bottom: 20px; }
 
 .profile-scroll-content {
-  background-color: #FFC107; }
+  background-color: #FFD54F; }
 
 .recs-title-container {
   display: block;
@@ -10151,11 +10150,22 @@ input[type="color"] {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
+.recs-body {
+  font-size: 1.1em;
+  line-height: 1.4; }
+
+h1.rating-text {
+  font-family: "Sanchez", serif;
+  font-size: 1.6em; }
+
+.rating-text {
+  font-size: 1em; }
+
 .new-recs-scroll-content {
-  background-color: #EBE955; }
+  background-color: #F76264; }
 
 .old-recs-scroll-content {
-  background-color: #62C2CC; }
+  background-color: #AD1457; }
 
 .coasters-container {
   display: block;
@@ -10241,7 +10251,7 @@ input[type="color"] {
   line-height: 1.5; }
 
 .info-scroll-content {
-  background-color: #F76264; }
+  background-color: #EBE955; }
 
 .info-coaster {
   text-align: center;
