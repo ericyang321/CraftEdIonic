@@ -57,12 +57,26 @@
     @include vertical-snap();
 }
 
+.recs-body{
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+h1.rating-text{
+    font-family: $sanchez;
+    font-size: 1.6em;
+}
+
+.rating-text{
+    font-size: 1em;
+}
+
 .new-recs-scroll-content{
-    background-color: $yellow;
+    background-color: $pastel-red;
 }
 
 .old-recs-scroll-content{
-    background-color: #62C2CC;
+    background-color: #AD1457;
 }
 
 .coasters-container{
@@ -89,6 +103,7 @@
    align-items: baseline;
     -webkit-background-clip: text;
 }
+
 
 .coaster{
     position: relative;
