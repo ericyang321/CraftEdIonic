@@ -38,6 +38,7 @@ craftEd.controller('OldLikeController', ['$scope', '$http', '$location', '$state
   $http.get(rootUrl + '/users/:user_id/beer_types/rec_like', tokens)
     .then(function(response){
       $scope.allRecs = response.data
+      console.log($scope.allRecs)
       $scope.rootUrl = rootUrl
       $scope.title = "Beers I'll probably like"
     });

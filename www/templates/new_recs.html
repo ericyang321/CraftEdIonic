@@ -1,4 +1,4 @@
-<ion-view view-title="Recommendations">
+<ion-view view-title="Recommendations" hide-back-button="true">
   <ion-content class='new-recs-scroll-content'>
     <div class='sliders-title-container'><h1 class='sliders-title'>{{title}}</h1></div>
     <!-- <button menu-toggle="left" class="button button-icon icon ion-navicon"></button> -->
@@ -9,8 +9,8 @@
         </div>
 
         <div class='recs-title-container'>
-            <p class='recs-body'>Here are some beer suggestions, based on... random selection!</p>
-            <p class='recs-body'><b>Tap or slide left to rate a beer.</b></p>
+            <p class='recs-body'>Here's your randomly selected beer flight.</p>
+            <p class='recs-body'><b>Tap or slide left to rate...</b></p>
         </div>
 
         <div ng-repeat="newRec in allRecs">
