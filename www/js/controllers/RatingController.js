@@ -52,7 +52,6 @@ craftEd.controller('RatingController', ['$scope', '$http', '$location', '$state'
           document.getElementById("tag-label-" + tag.id).className += " selected"
         }
       };
-      console.log(selection)
     });
 
 
