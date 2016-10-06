@@ -31,7 +31,13 @@ craftEd.controller('UserController', ['$scope', '$http', '$location', '$ionicPop
   };
 
   $scope.register = function(){
-    if($scope.password === $scope.password_confirmation) {
+    if(!$scope.password) {
+        showAlert("Please enter a password.");
+      }
+    if(!$scope.email) {
+        showAlert("Please enter an email address.");
+      }
+    else if($scope.password === $scope.password_confirmation && $scope.password.length >=8) {
       register = {email: $scope.email, password: $scope.password, password_confirmation: $scope.password_confirmation};
       $http.post(rootUrl + '/v1/auth', register, config)
         .then(function(response){
