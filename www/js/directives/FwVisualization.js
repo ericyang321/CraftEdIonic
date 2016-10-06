@@ -214,8 +214,19 @@ var data = {
    ]
 }
 
-var width = 500,
-    height = 400,
+  // var type0 = angular.element(document.querySelector('beer-type-0'));
+  // var type1 = angular.element(document.querySelector('beer-type-1'));
+  var type2 = document.getElementsByClassName('beer-type-2');
+
+  var wheelClick = function(){
+    for(var i = 0; i < type2.length; i++){
+      type2[i].style.opacity = 1;
+      
+    }
+  };
+
+var width = 320,
+    height = 320,
     radius = Math.min(width, height)/2.2;
 
 var x = d3.scale.linear().range([0, 2 * Math.PI]);
@@ -246,17 +257,19 @@ var arc = d3.svg.arc()
 
 var generateChart = function(scope, elem, attrs) {
   var color = d3.scale.threshold().domain([-3,-2,-1,0,1,2,3]).range(["#e6ac00","#B71C1C","#EF5350","#EF9A9A","#e6ac00","#81C784","#43A047","#1B5E20"]);
+    // var color = d3.scale.threshold().domain([-3,-2,-1,0,1,2,3]).range(["#FFFFFF"]);
       var svg = d3.select(elem[0]).append("svg")
         .attr("width", width)
         .attr("height", height + 100)
         .append("g")
-        .attr("transform", "translate(" + width / 2 + "," + (height / 2 + 100) + ")");
+        .attr("transform", "translate(" + (width / 2+5) + "," + (height / 2+40) + ")");
 
 
 
     var g = svg.selectAll("g")
         .data(partition.nodes(data))
         .enter().append("g")
+        .attr("onclick", function(d){ return "wheelClick()"})
         .attr("id", function(d){ return d.name })
         .attr("class", function(d){ return d.name + " beer-type-" + d.depth});
     var path = g.append("path")
@@ -275,7 +288,7 @@ var generateChart = function(scope, elem, attrs) {
       // fade out all text elements
       text.transition().attr("opacity", 0);
       path.transition()
-        .duration(750)
+        .duration(600)
         .attrTween("d", arcTween(d))
         .each("end", function(e, i) {
             // check if the animated element's data e lies within the visible angle span given in d
@@ -283,7 +296,7 @@ var generateChart = function(scope, elem, attrs) {
               // get a selection of the associated text element
               var arcText = d3.select(this.parentNode).select("text");
               // fade in the text element and recalculate positions
-              arcText.transition().duration(300)
+              arcText.transition().duration(600)
                 .attr("opacity", 1)
                 .attr("transform", function() { return "rotate(" + computeTextRotation(e) + ")" })
                 .attr("x", function(d) { return y(d.y); });

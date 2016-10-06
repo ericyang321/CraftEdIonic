@@ -1,10 +1,5 @@
 .flavor-wheel{
-    margin: 15px;
     text-align: center;
-}
-
-svg{
-    left: 0;
 }
 
 .flavor-wheel-legend{
@@ -82,4 +77,27 @@ svg{
 
 .profile-scroll-content{
     background-color: #FFD54F;
+}
+
+path {
+  stroke: #d6d6d6;
+  fill-rule: evenodd;
+}
+
+text {
+  font-family: $opensans;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.beer-type-2{
+  opacity: 0;
+}
+
+.beer-type-0{
+    fill: #000000;
+}
+
+.svg-wheel{
+
 }
