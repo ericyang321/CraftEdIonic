@@ -214,16 +214,24 @@ var data = {
    ]
 }
 
-  // var type0 = angular.element(document.querySelector('beer-type-0'));
+// var type0 = angular.element(document.querySelector('beer-type-0'));
   // var type1 = angular.element(document.querySelector('beer-type-1'));
   var type2 = document.getElementsByClassName('beer-type-2');
 
-  var wheelClick = function(){
+var wheelClick = function(){
     for(var i = 0; i < type2.length; i++){
       type2[i].style.opacity = 1;
-      
     }
   };
+
+var wheelHide = function(){
+  for(var i = 0; i < type2.length; i++){
+      type2[i].style.opacity = 0;
+    }
+  };
+var literallyNothing = function(){
+  console.log('nothing lol')
+}
 
 var width = 320,
     height = 320,
@@ -269,7 +277,19 @@ var generateChart = function(scope, elem, attrs) {
     var g = svg.selectAll("g")
         .data(partition.nodes(data))
         .enter().append("g")
-        .attr("onclick", function(d){ return "wheelClick()"})
+
+        // CUSTOM ONCLICK COMMAND
+
+        .attr("onclick", function(d){ 
+          if(d.depth === 0){
+            return "wheelHide()";
+          }else if(d.depth === 1){
+            return "wheelClick()";
+          }else if(d.depth === 2){
+            return "literallyNothing()";
+          }
+        })
+
         .attr("id", function(d){ return d.name })
         .attr("class", function(d){ return d.name + " beer-type-" + d.depth});
     var path = g.append("path")
@@ -303,8 +323,11 @@ var generateChart = function(scope, elem, attrs) {
             }
         });
     };
-
   }
+
+ 
+
+  
     d3.select(self.frameElement).style("height", height + "px");
 craftEd.directive('fwVisualization', function() {
   return {
