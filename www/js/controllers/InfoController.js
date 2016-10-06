@@ -1,4 +1,4 @@
-craftEd.controller('InfoController', ['$scope', '$http', '$location', '$state',function($scope, $http, $location, $state) {
+craftEd.controller('InfoController', ['$scope', '$http', '$location', '$state',function($scope, $http, $location, $state){
 
   var config = {
     headers: {
@@ -29,7 +29,6 @@ craftEd.controller('InfoController', ['$scope', '$http', '$location', '$state',f
 
  $http.get(rootUrl + '/users/:user_id/tried_beer_ratings/:id/beer_types', tokens)
     .then(function(response){
-      console.log(response)
       $scope.allInfos= response.data
     });
 }])
