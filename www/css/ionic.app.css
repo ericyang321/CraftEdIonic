@@ -9706,8 +9706,8 @@ a.button {
   padding: 10px;
   margin: 5px;
   font-size: 0.8em;
-  color: #d6d6d6;
-  border: 1px solid #d6d6d6;
+  color: black;
+  border: 1px solid black;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
@@ -10161,7 +10161,7 @@ input[type="color"] {
   background-color: #FFD54F; }
 
 path {
-  stroke: #d6d6d6;
+  stroke: black;
   fill-rule: evenodd; }
 
 text {
@@ -10213,7 +10213,7 @@ h1.rating-text {
   background-color: #88B6B6; }
 
 .old-recs-scroll-content {
-  background-color: #AD1457; }
+  background-color: teal; }
 
 .coasters-container {
   display: block;
@@ -10222,13 +10222,13 @@ h1.rating-text {
 
 .coaster-bar {
   padding: 20px;
-  background-color: #5A9363;
+  background-color: #FFC107;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  -webkit-box-shadow: 2px 2px 0px #bf9000;
-  -moz-box-shadow: 2px 2px 0px #bf9000;
-  box-shadow: 2px 2px 0px #bf9000;
+  -webkit-box-shadow: 2px 2px 0px #424242;
+  -moz-box-shadow: 2px 2px 0px #424242;
+  box-shadow: 2px 2px 0px #424242;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
