@@ -76,7 +76,7 @@ h1.rating-text{
 }
 
 .old-recs-scroll-content{
-    background-color: #AD1457;
+    background-color: teal;
 }
 
 .coasters-container{
@@ -88,11 +88,11 @@ h1.rating-text{
 
 .coaster-bar{
     padding: 20px;
-    background-color: $green;
+    background-color: #FFC107;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    @include box-shadow(2px, 2px, 0px, $lightBrown);
+    @include box-shadow(2px, 2px, 0px, #424242);
     @include border-radius(8px);
     // @include flex-bar
 }
