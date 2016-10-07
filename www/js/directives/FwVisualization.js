@@ -1,4 +1,4 @@
-var data = {
+craftEd.data = {
   "name": "",
   "rating": 0,
 
@@ -20,7 +20,7 @@ var data = {
 
     {
      "name": "Porters","size": 5,
-     "rating": 0,
+     "rating": 1,
      "children": [
         {
           "name": "Baltic", "size": 5
@@ -74,7 +74,7 @@ var data = {
 
     {
      "name": "Belgians","size": 5,
-     "rating": 0,
+     "rating": 3,
      "children": [
         {
           "name": "Abbey", "size": 5
@@ -141,7 +141,7 @@ var data = {
 
      {
      "name": "Bocks","size": 5,
-     "rating": 0,
+     "rating": -1,
      "children": [
         {
           "name": "Eisbock", "size": 5
@@ -157,7 +157,7 @@ var data = {
 
     {
      "name": "Pale Lagers","size": 5,
-     "rating": 0,
+     "rating": -2,
      "children": [
         {
           "name": "American", "size": 5
@@ -198,7 +198,7 @@ var data = {
 
     {
      "name": "Ambers","size": 5,
-     "rating": 0,
+     "rating": -3,
      "children": [
         {
           "name": "Vienna", "size": 5
@@ -215,8 +215,8 @@ var data = {
 }
 
 // var type0 = angular.element(document.querySelector('beer-type-0'));
-  // var type1 = angular.element(document.querySelector('beer-type-1'));
-  var type2 = document.getElementsByClassName('beer-type-2');
+// var type1 = angular.element(document.querySelector('beer-type-1'));
+var type2 = document.getElementsByClassName('beer-type-2');
 
 var wheelClick = function(){
     for(var i = 0; i < type2.length; i++){
@@ -230,7 +230,7 @@ var wheelHide = function(){
     }
   };
 var literallyNothing = function(){
-  console.log('nothing lol')
+  console.log('')
 }
 
 var width = 320,
@@ -265,73 +265,70 @@ var arc = d3.svg.arc()
 
 var generateChart = function(scope, elem, attrs) {
   var color = d3.scale.threshold().domain([-3,-2,-1,0,1,2,3]).range(["#FFD54F","#B71C1C","#EF5350","#EF9A9A","#FFD54F","#81C784","#43A047","#1B5E20"]);
-    // var color = d3.scale.threshold().domain([-3,-2,-1,0,1,2,3]).range(["#FFFFFF"]);
-      var svg = d3.select(elem[0]).append("svg")
-        .attr("width", width)
-        .attr("height", height + 100)
-        .append("g")
-        .attr("transform", "translate(" + (width / 2+1) + "," + (height / 2) + ")");
+  var svg = d3.select(elem[0]).append("svg")
+    .attr("width", width)
+    .attr("height", height + 100)
+    .append("g")
+    .attr("transform", "translate(" + (width / 2+1) + "," + (height / 2) + ")");
 
+  var g = svg.selectAll("g")
+    .data(partition.nodes(craftEd.data))
+    .enter().append("g")
+    .attr("onclick", function(d){
+      if(d.depth === 0){
+        return "wheelHide()";
+      }else if(d.depth === 1){
+        return "wheelClick()";
+      }else if(d.depth === 2){
+        return "literallyNothing()";
+      }
+    })
+    .attr("id", function(d){ return d.name })
+    .attr("class", function(d){ return d.name + " beer-type-" + d.depth});
 
+  var path = g.append("path")
+    .attr("d", arc)
+    // Below is the method that applies the color template to the wheel
+    .style("fill", function(d) {return color((d.children ? d : d.parent).rating); })
+    .on("click", click);
 
-    var g = svg.selectAll("g")
-        .data(partition.nodes(data))
-        .enter().append("g")
+  var text = g.append("text")
+    .attr("transform", function(d) { return "rotate(" + computeTextRotation(d) + ")"; })
+    .attr("x", function(d) {return y(d.y);})
+    .attr("dx", "6") // margin
+    .attr("dy", ".35em") // vertical-align
+    .text(function(d) { return d.name; })
+    .on("click", click);
 
-        // CUSTOM ONCLICK COMMAND
-
-        .attr("onclick", function(d){ 
-          if(d.depth === 0){
-            return "wheelHide()";
-          }else if(d.depth === 1){
-            return "wheelClick()";
-          }else if(d.depth === 2){
-            return "literallyNothing()";
+  function click(d) {
+    // fade out all text elements
+    text.transition().attr("opacity", 0);
+    path.transition()
+      .duration(600)
+      .attrTween("d", arcTween(d))
+      .each("end", function(e, i) {
+          // check if the animated element's data e lies within the visible angle span given in d
+          if (e.x >= d.x && e.x < (d.x + d.dx)) {
+            // get a selection of the associated text element
+            var arcText = d3.select(this.parentNode).select("text");
+            // fade in the text element and recalculate positions
+            arcText.transition().duration(600)
+              .attr("opacity", 1)
+              .attr("transform", function() { return "rotate(" + computeTextRotation(e) + ")" })
+              .attr("x", function(d) { return y(d.y); });
           }
-        })
-
-        .attr("id", function(d){ return d.name })
-        .attr("class", function(d){ return d.name + " beer-type-" + d.depth});
-    var path = g.append("path")
-      .attr("d", arc)
-      // Below is the method that applies the color template to the wheel
-      .style("fill", function(d) {return color((d.children ? d : d.parent).rating); })
-      .on("click", click);
-    var text = g.append("text")
-      .attr("transform", function(d) { return "rotate(" + computeTextRotation(d) + ")"; })
-      .attr("x", function(d) {return y(d.y);})
-      .attr("dx", "6") // margin
-      .attr("dy", ".35em") // vertical-align
-      .text(function(d) { return d.name; })
-      .on("click", click);
-    function click(d) {
-      // fade out all text elements
-      text.transition().attr("opacity", 0);
-      path.transition()
-        .duration(600)
-        .attrTween("d", arcTween(d))
-        .each("end", function(e, i) {
-            // check if the animated element's data e lies within the visible angle span given in d
-            if (e.x >= d.x && e.x < (d.x + d.dx)) {
-              // get a selection of the associated text element
-              var arcText = d3.select(this.parentNode).select("text");
-              // fade in the text element and recalculate positions
-              arcText.transition().duration(600)
-                .attr("opacity", 1)
-                .attr("transform", function() { return "rotate(" + computeTextRotation(e) + ")" })
-                .attr("x", function(d) { return y(d.y); });
-            }
-        });
+      });
     };
+    d3.select(self.frameElement).style("height", height + "px");
   }
 
- 
 
-  
-    d3.select(self.frameElement).style("height", height + "px");
+
+
+
 craftEd.directive('fwVisualization', function() {
   return {
-      restrict: 'A',
-      link: generateChart
-    }
+    restrict: 'A',
+    link: generateChart
+  }
 });
