@@ -5,8 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 
-// var rootUrl = 'http://how-to-train-your-palate-api.herokuapp.com'
-var rootUrl = 'http://localhost:3000'
+var rootUrl = 'http://how-to-train-your-palate-api.herokuapp.com'
+// var rootUrl = 'http://localhost:3000'
 
 const craftEd = angular.module('craftEd', ['ionic'])
 
