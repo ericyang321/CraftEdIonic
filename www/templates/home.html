@@ -1,9 +1,26 @@
-<ion-view hide-nav-bar="true" view-title="Home">
+<ion-view view-title="Home" hide-back-button="true">
   <ion-content class='home-scroll-content'>
-    <div class='home-title-coaster'><h1 class='home-title'>Welcome to <b>CraftEd</b></h1></div>
-    <div class='home-card'>
-      <h1 class='home-description-title'>Better drinking through (computer) science!</h1>
+    <div class='home-title-coaster'>
+      <h1 class='home-title'>Welcome to <b>CraftEd</b></h1>
     </div>
+
+    <div class='home-card'>
+      <h1 class='home-description-title'>Better beer drinking through (computer) science!</h1>
+    </div>
+
+    <div class='home-card'>
+      <h1 class='home-description-title'>Here's how it works:</h1>
+      <ul>
+        <li class='home-description-list'><b>1:</b> Login or create an account.</li>
+        <li class='home-description-list'><b>2:</b> Order a beer based on our recommendation.</li>
+        <li class='home-description-list'><b>3:</b> Rate the beer!</li>
+      </ul>
+    </div>
+
+    <!-- <div class='home-card'>
+      <h1 class='home-description-title'>Based on how well you rate each new beer, CraftEd will refine recommendations, <b>until you find what you truly love to drink.</b></h1>
+    </div> -->
+    
       <div class='home-card'>
       <p class='home-description larger'>Let's Get Started!</p>
         <div class='home-button-container'>
@@ -11,8 +28,5 @@
           <a href="#/app/login" class="button home">Login</a>
         </div>
       </div>
-      <!-- <form name="logoutForm" ng-controller="UserController">
-          <button ng-click="logout()" class="button home" type="submit">Log Out</button>
-      </form> -->
   </ion-content>
 </ion-view>

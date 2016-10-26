@@ -16,6 +16,7 @@
 
 .rating-card.beer-detailed-description{
     text-align: left;
+    @include box-shadow(0px, 2px, 0px, darken($yellow, 30%));
 }
 
 .rating_confirm-content{

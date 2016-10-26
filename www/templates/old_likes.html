@@ -1,16 +1,15 @@
 <ion-view view-title="Recommendations">
   <ion-content class='old-recs-scroll-content'>
-    <div class='sliders-title-container'><h1 class='sliders-title'>{{title}}</h1></div>
-    <!-- <button menu-toggle="left" class="button button-icon icon ion-navicon"></button> -->
-
     <div ng-controller="OldLikeController">
         <div class='title-coaster'>
-            <h1 class='recs-title'>YOUR RECS</h1>
+            <h1 class='recs-title'>SUGGESTED</h1>
         </div>
 
         <div class='recs-title-container'>
-            <p class='recs-body'>Here's your robot curated beer flight.</p>
-            <p class='recs-body'><b>Tap or slide left to rate...</b></p>
+            <h1 class='recs-body-title'>Here's your robot curated beer flight.</h1>
+            <!-- <h1 class='recs-body-title'>Heres a list of beers you might like</h1> -->
+            <p class='recs-body'><b>Try a beer listed on this page!</b></p>
+            <p class='recs-body'>Tap or slide left to rate...</p>
         </div>
         <div ng-repeat="oldRec in allRecs">
             <div class='coasters-container'>

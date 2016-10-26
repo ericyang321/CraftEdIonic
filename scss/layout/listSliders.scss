@@ -40,26 +40,38 @@
     text-align: left;
     font-size: 1.1em;
     background-color: white;
-    border: 1px solid white;
     padding: 15px;
     margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 15px;
     max-width: 280px;
     line-height: 1.5;
-    @include border-radius(8px);
+    @include border-radius(4px);
+    @include box-shadow(0px, 2px, 0px, darken(#3176AB, 30%));
+}
+
+.new-recs{
+    @include box-shadow(0px, 2px, 0px, darken($dullgray, 30%));
 }
 
 .recs-title{
     font-family: $sanchez;
-    font-size: 1.5em;
+    margin: 0;
+    font-size: 1.2em;
     color: white;
     @include vertical-snap();
 }
 
+.recs-body-title{
+    font-size: 1.3em;
+    line-height: 1.5;
+    font-family: $sanchez;
+    text-align: left;
+}
+
 .recs-body{
-    font-size: 1.1em;
-    line-height: 1.4;
+    font-size: 1em;
+    line-height: 1.5;
 }
 
 h1.rating-text{
@@ -76,7 +88,7 @@ h1.rating-text{
 }
 
 .old-recs-scroll-content{
-    background-color: teal;
+    background-color: #3176AB;
 }
 
 .coasters-container{
@@ -92,9 +104,9 @@ h1.rating-text{
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    @include box-shadow(2px, 2px, 0px, #424242);
-    @include border-radius(8px);
-    // @include flex-bar
+
+    @include box-shadow(0px, 2px, 0px, darken(#FFC107, 30%));
+    @include border-radius(4px);
 }
 
 .slide{
@@ -111,6 +123,7 @@ h1.rating-text{
     width: 100px;
     height: 100px;
     font-size: 1em;
+    font-weight: bold;
     text-align: center;
     @include border-radius(50%);
 }
