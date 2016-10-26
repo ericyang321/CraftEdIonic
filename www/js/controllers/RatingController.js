@@ -39,6 +39,7 @@ craftEd.controller('RatingController', ['$scope', '$http', '$location', '$state'
       $scope.allTags= response.data
 
       $scope.selection = [];
+      
       $scope.toggleSelection = function toggleSelection(tag) {
         var idx = $scope.selection.indexOf(tag.id);
         var flavorSelector = angular.element(document.querySelector('tag-select-box'));

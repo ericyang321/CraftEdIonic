@@ -9,8 +9,8 @@
 }
 
 .button.button-block{
-    min-width: 50%;
-    max-width: 60%;
+    min-width: 120px;
+    max-width: 120px;
     background-color: black;
     color: white;
     margin: 0 auto;
@@ -20,7 +20,8 @@
 }
 
 .login-scroll-content{
-    background-color: #AD1457;
+    background-color: #FFCD00;
+    // background-image: url('background.jpg');
 }
 
 .custom-button{
@@ -44,7 +45,12 @@
     margin-bottom: 15px;
     max-width: 300px;
     line-height: 1.1;
-    @include border-radius(8px);
+    @include border-radius(5px);
+    @include box-shadow(0px, 2px, 0px, darken(#FFCD00, 25%));
+}
+
+.input-label{
+    font-family: $sanchez;
 }
 
 textarea,

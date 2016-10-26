@@ -6,7 +6,7 @@ craftEd.data = {
 
     {
       "name": "Browns", "size": 15,
-      "rating": -3,
+      "rating": 0,
       "children": [
         {
           "name": "American", "size": 5
@@ -264,7 +264,7 @@ var arc = d3.svg.arc()
     .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
 
 var generateChart = function(scope, elem, attrs) {
-  var color = d3.scale.threshold().domain([-3,-2,-1,0,1,2,3]).range(["#FFD54F","#B71C1C","#EF5350","#EF9A9A","#FFD54F","#81C784","#43A047","#1B5E20"]);
+  var color = d3.scale.threshold().domain([-3,-2,-1,0,1,2,3]).range(["#F9A828","#B71C1C","#EF5350","#EF9A9A","#F9A828","#81C784","#43A047","#1B5E20"]);
   var svg = d3.select(elem[0]).append("svg")
     .attr("width", width)
     .attr("height", height + 100)

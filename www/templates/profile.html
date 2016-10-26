@@ -1,22 +1,22 @@
 <ion-view view-title="CraftEd" hide-back-button="true">
   <ion-content ng-controller="ProfileController" class='profile-scroll-content'>
     <div class="title-coaster"><span class='profile-title'>PROFILE</span></div>
-    <div class='click-container'>
+    <div class='profile-card'>
       <div class='recommendation-button-container'>
-      <h1 class='click-title'>Let's drink!</h1>
+      <h1 class='profile-card-title'>Let's Drink!</h1>
        <a href="#/app/old_likes" class="button recommendation-button">Recommend a Beer I'll Like</a>
        <a href="#/app/new_recs" class="button recommendation-button">Recommend a Random Beer</a>
       </div>
     </div>
-
-      <div class='flavor-wheel'>
-          <div fw-visualization class='svg-wheel'>
-          <div class='seem-to-preference-container'>
-             Red
-            <label class="ion-thumbsdown thumbs-icon down"></label>
-            | Green  <label class="ion-thumbsup thumbs-icon up"></label>
-          </div>
+    <div class='flavor-wheel'>
+        <div fw-visualization class='svg-wheel'>
+        <div class='profile-card'>
+        <h1 class='profile-card-title'>Beer Preference Wheel</h1>
+           Hate It  <label class="ion-thumbsdown thumbs-icon down"></label>
+          | Love It  <label class="ion-thumbsup thumbs-icon up"></label>
+          <i class='help ion-help-circled' ng-click='showPopup()'></i>
         </div>
       </div>
+    </div>
   </ion-content>
 </ion-view>

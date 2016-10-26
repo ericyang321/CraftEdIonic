@@ -47,8 +47,8 @@
     font-family: $sanchez;
     padding: 10px;
     padding: 10px;
-    background-color: $pastel-red;
-    border: 1px solid $pastel-red;
+    background-color: #2E383F;
+    border: 1px solid #2E383F;
     max-width: 280px;
     color: white;
     // @include box-shadow(1px, 1px, 1px, #d6d6d6);
@@ -81,7 +81,7 @@
     @include border-radius(8px);
 }
 
-.click-container{
+.profile-card{
     display: block;
     background-color: white;
     border: 1px solid white;
@@ -91,9 +91,10 @@
     margin-bottom: 15px;
     max-width: 300px;
     @include border-radius(8px);
+    @include box-shadow(0px, 2px, 0px, darken(#F9A828, 30%));
 }
 
-.click-title{
+.profile-card-title{
     font-family: $sanchez;
     color: black;
     font-size: 1.5em;
@@ -101,6 +102,21 @@
     margin-bottom: 20px;
 }
 
+.help{
+    position: relative;
+    left: 50px;
+    top: 10px;
+}
+
+.popup-container.active .popup{
+    background-color: white;
+    @include border-radius(5px);
+}
+
+.popup-buttons .button:last-child{
+    background-color: #F9A828;
+    @include border-radius(8px);
+}
 
 .seem-to-preference-title{
     font-family: $sanchez;
@@ -109,17 +125,24 @@
 }
 
 .profile-scroll-content{
-    background-color: #FFD54F;
+    background-color: #F9A828;
+}
+
+.profile-card-li{
+    margin: 0;
+    text-align: left;
+    padding: 5px;
+    font-size: 1.1em;
 }
 
 path {
-  stroke: #FFD54F;
+  stroke: black;
   fill-rule: evenodd;
 }
 
 text {
   font-family: $opensans;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .beer-type-2{

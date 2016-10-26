@@ -2,16 +2,31 @@
   <ion-content class='rating-scroll-content'>
     <!-- <button menu-toggle="left" class="button button-icon icon ion-navicon"></button> -->
     <form name="ratingForm" ng-controller="RatingController">
-      <div class="title-coaster"><div class='rating-title'>{{allTags.mainType.name}}</div></div>
-
-      <div class='rating-card beer-detailed-description'>
-      <p>Tell us more about your beer so we can refine your preferences.</p>
+      <div class="title-coaster">
+        <div class='rating-title'>{{allTags.mainType.name}}</div>
       </div>
 
-      <div class='beer-rating-card'>
-        <p class='rating-text'>Yay or Nay?</p>
+       <div class='rating-card animate-show' ng-show="filter=='no'">
+        <h1 class='rating-text animate-show'>Give this beer a chance!</h1>
+        <p class='rating-text'>Let's rate this beer after you've tried some of it.</p>
+      </div>
 
-        <div class='star-chart'>
+      <div class='rating-card beer-detailed-description'>
+        <h1 class='rating-text'>Did you get to take a sip of <b>{{allTags.mainType.name}}</b>?</h1>
+        <div class='sipped-container' ng-hide="filter=='yes'">
+          <label class='drank' for='drink-yes'>Yep!</label>
+          <input type='radio' name='drink' id='drink-yes' value='yes' ng-model='filter'>
+          <label class='drank' for='drink-no'>Not Yet.</label>
+          <input type='radio' name='drink' id='drink-no' value='no' ng-model='filter'>
+        </div>
+        <h1 class='rating-text yep animate-show' ng-show="filter=='yes'">Yep!</h1>
+      </div>
+     
+
+      <div class='beer-rating-card animate-show' ng-show="filter=='yes'">
+        <p class='rating-text'>What did you think about it?</p>
+
+        <div class='beer-chart'>
           <span class="beerRate">
             <input id="rating3" type="radio" ng-model="rating" name="rating" class='rating' value='3'>
             <label class='icon ion-ios-pint-outline' for="rating3"></label>
@@ -26,7 +41,7 @@
 
       </div>
 
-    <div class='rating-card'>
+    <div class='rating-card animate-show' ng-show="filter=='yes'">
       <p class='rating-text'><b>Any Specific Beer Types?</b></p>
       <p class='rating-text'>(Might be on your menu)</p>
       <div class='tag-container'>
@@ -49,7 +64,7 @@
       </div> -->
 
     <div class='submit-container'>
-      <button ng-click="submitRating()" class="button button-block rating-submit-button" type="submit">Submit</button>
+      <button ng-click="submitRating()" class="button button-block rating-submit-button animate-show" type="submit" ng-show="filter=='yes'">Submit</button>
     </div>
     </form>
     </div>
