@@ -7,7 +7,7 @@ $scope.$on("$ionicView.afterEnter", function(event, data){
 $scope.showPopup = function(){
   var myPopup = $ionicPopup.alert({
     title: 'Beer Wheel Guide',
-    templateUrl: "templates/instruction_popup.html",
+    templateUrl: "templates/ProfileInstructionPopup.html",
     okText: 'Close'
   });
 }

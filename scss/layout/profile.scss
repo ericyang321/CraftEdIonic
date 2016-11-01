@@ -48,10 +48,9 @@
     padding: 10px;
     padding: 10px;
     background-color: #2E383F;
-    border: 1px solid #2E383F;
     max-width: 280px;
     color: white;
-    // @include box-shadow(1px, 1px, 1px, #d6d6d6);
+    // @include box-shadow(0px, 2px, 0px, #2E383F);
     @include border-radius(8px);
 }
 

@@ -6,12 +6,8 @@
         <div class='rating-title'>{{allTags.mainType.name}}</div>
       </div>
 
-       <div class='rating-card animate-show' ng-show="filter=='no'">
-        <h1 class='rating-text animate-show'>Give this beer a chance!</h1>
-        <p class='rating-text'>Let's rate this beer after you've tried some of it.</p>
-      </div>
 
-      <div class='rating-card beer-detailed-description'>
+      <div class='beer-rating-card beer-detailed-description'>
         <h1 class='rating-text'>Did you get to take a sip of <b>{{allTags.mainType.name}}</b>?</h1>
         <div class='sipped-container' ng-hide="filter=='yes'">
           <label class='drank' for='drink-yes'>Yep!</label>
@@ -22,6 +18,10 @@
         <h1 class='rating-text yep animate-show' ng-show="filter=='yes'">Yep!</h1>
       </div>
      
+       <div class='rating-card animate-show' ng-show="filter=='no'">
+        <h1 class='rating-text animate-show'>Give this beer a chance!</h1>
+        <p class='rating-text'>Let's rate this beer after you've tried some of it.</p>
+      </div>
 
       <div class='beer-rating-card animate-show' ng-show="filter=='yes'">
         <p class='rating-text'>What did you think about it?</p>
@@ -42,7 +42,7 @@
       </div>
 
     <div class='rating-card animate-show' ng-show="filter=='yes'">
-      <p class='rating-text'><b>Any Specific Beer Types?</b></p>
+      <p class='rating-text'><b>What Specific Beer Type Did You Drink?</b></p>
       <p class='rating-text'>(Might be on your menu)</p>
       <div class='tag-container'>
       <label id="tag-label-{{tag.id}}" ng-repeat="tag in allTags.associatedTypes" class='tag'>
@@ -67,6 +67,5 @@
       <button ng-click="submitRating()" class="button button-block rating-submit-button animate-show" type="submit" ng-show="filter=='yes'">Submit</button>
     </div>
     </form>
-    </div>
   </ion-content>
 </ion-view>
