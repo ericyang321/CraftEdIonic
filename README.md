@@ -1,4 +1,5 @@
 # Welcome to CraftEd
+### Now available on [iOS Appstore](https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1188125687&mt=8)
 
 ![Main2](images/mockup4.png)
 
@@ -7,11 +8,6 @@
 >By ordering beers based off of our recommendation and submitting ratings for these beers, CraftEd's algorithm will help you find your favorite flavors of beer with each rating you submit!
 
 ![Main1](images/mockup3.png)
-
-## Usage
-**Mobile App coming soon to the Google Play Store**
-
-If you'd like to try the app, send an email to **ericyang321@gmail.com**.
 
 ## Develop
 Clone this repo and run `npm install` to download all relevant packages.
@@ -29,7 +25,7 @@ $ ionic emulate
 
 More detailed instructions can be found [here](https://ionicframework.com/docs/guide/testing.html).
 
-####Scss
+#### SCSS
 For scss auto-compilation, run:
 
 ```
