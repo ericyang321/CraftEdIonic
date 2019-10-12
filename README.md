@@ -1,13 +1,11 @@
 # Welcome to CraftEd
 ### Now available on [iOS Appstore](https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1188125687&mt=8)
 
-![Main2](images/mockup4.png)
+![Main1](images/mockup3.png)
 
 **CraftEd is a hybrid mobile web application that help users discover(or rediscover) their beer palate.**
 
->By ordering beers based off of our recommendation and submitting ratings for these beers, CraftEd's algorithm will help you find your favorite flavors of beer with each rating you submit!
-
-![Main1](images/mockup3.png)
+By ordering beers based off of our recommendation and submitting ratings for these beers, CraftEd's algorithm will help you find your favorite flavors of beer with each rating you submit!
 
 ## Develop
 Clone this repo and run `npm install` to download all relevant packages.
